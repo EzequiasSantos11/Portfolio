@@ -11,8 +11,8 @@ const theme = {
 export default function App({ Component, pageProps }) {
   return (
     <>
+      <Heads/>
       <ThemeProvider theme={theme}>
-        <Heads/>
         <GlobalStyle />
         <Component {...pageProps} />
       </ThemeProvider>

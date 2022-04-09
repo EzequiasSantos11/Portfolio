@@ -1,5 +1,5 @@
 import Head from "next/head";
-function Heads() {
+export default function Heads() {
   return (
     <Head>
       <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -13,4 +13,3 @@ function Heads() {
     </Head>
   );
 }
-export default Heads;
