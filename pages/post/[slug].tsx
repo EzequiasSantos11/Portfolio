@@ -1,13 +1,13 @@
 import { getAllPosts } from "../../scripts/blog/getAllPosts";
 import { GetStaticProps, GetStaticPaths } from "next";
 import { useRouter } from "next/router";
+import { PropsPost } from "../../@types";
 
-export default function Post({ post }) {
+export default function Post({ post }: PropsPost) {
   const { isFallback } = useRouter();
   if (isFallback) {
     return <h1>Loading...</h1>;
   }
-  console.log(post);
   return (
     <article>
       <h1>{post.metadata.title}</h1>

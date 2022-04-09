@@ -1,7 +1,7 @@
 ---
-title: 'Olá Mundo! este é meu primeiro post'
+title: 'Olá Mundo! este é meu  post'
 date: '09/04/2022'
-excerpt: "Este post é apenas para dar as boas vindas ao meu blog, para todos os dev's que tem sede de conhecimento!"
+excerpt: "Resumo do post"
 ---
 
 Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, magnam? Sunt saepe eius, magnam voluptatem expedita non laudantium cumque consequatur ipsum, maiores deleniti cupiditate! Doloremque nostrum dolore maiores repudiandae non!Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, magnam? Sunt saepe eius.
