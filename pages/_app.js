@@ -1,6 +1,6 @@
 import { ThemeProvider } from "styled-components";
 import GlobalStyle from "../Styles/GlobalStyle/index";
-import Heads from "../Components/Head";
+import {Heads} from "../Components/Head";
 
 const theme = {
   colors: {
