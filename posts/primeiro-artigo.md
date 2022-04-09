@@ -1,6 +1,6 @@
 ---
 title: 'Olá Mundo! este é meu primeiro post'
-date: '09/04/2022'
+date: '01/09/2022'
 excerpt: "Este post é apenas para dar as boas vindas ao meu blog, para todos os dev's que tem sede de conhecimento!"
 ---
 

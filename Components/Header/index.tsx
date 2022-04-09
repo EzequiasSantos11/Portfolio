@@ -15,13 +15,13 @@ export function HeaderComponent({name, avatar_url}:HeaderComponentProps){
       <nav>
         <ul>
           <li>
-            <a href="">Home</a>
+            <a href="/">Home</a>
           </li>
           <li>
-            <a href="">Sobre</a>
+            <a href="/sobre">Sobre</a>
           </li>
           <li>
-            <a href="">Contatos</a>
+            <a href="/contatos">Contatos</a>
           </li>
         </ul>
       </nav>

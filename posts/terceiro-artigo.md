@@ -1,6 +1,6 @@
 ---
 title: 'Olá Mundo! este é meu terceiro post'
-date: '2021-03-16'
+date: '03/09/2022'
 excerpt: "Resumo do post"
 ---
 

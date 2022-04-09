@@ -2,9 +2,27 @@ import styled from "styled-components";
 
 export const Home = styled.section`
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  height: 100vh;
-  padding-top: 6rem;
+  align-items: center;
+`;
+
+export const Main = styled.div`
+  display: flex;
+  width: 100%;
+  height: 80vh;
+  .background{
+    display: flex;
+    object-fit: cover;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    img{
+      height: 100%;
+      width: 100%;
+      position: absolute;
+    }
+  }
 `;
 
 export const Wrapper = styled.div`
@@ -27,6 +45,7 @@ export const Article = styled.article`
   transform: scale(0.9);
   &:hover{
     transform: scale(1);
+    box-shadow: 0 0 10px rgb(99, 32, 99);
   }
   >h2{
     margin-left: 40px;

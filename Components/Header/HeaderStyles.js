@@ -5,9 +5,9 @@ export const Header = styled.header`
   display: flex;
   align-items: center;
   justify-content: space-around;
-  height: 5rem;
+  height: 4rem;
   width: 100%;
-  background: blue;
+  background: #121214;
   position: fixed;
   top: 0;
   z-index: 999;
@@ -15,11 +15,12 @@ export const Header = styled.header`
     display: flex;
     align-items: center;
     img {
-      max-width: 50px;
+      width: 40px;
       border-radius: 100%;
-      margin-right: 16px;
+      margin-right: 8px;
     }
     h1 {
+      font-size: 18px;
       margin: 0;
     }
   }
@@ -31,6 +32,7 @@ export const Header = styled.header`
         a{
           font-size: 18px;
           margin: 0 10px;
+          color: white;
         }
       }
     }
