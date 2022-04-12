@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const PostComponent = styled.article`
+export const Container = styled.article`
   display: flex;
   flex-direction: column;
   justify-content: center;

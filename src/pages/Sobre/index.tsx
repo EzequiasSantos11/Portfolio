@@ -1,11 +1,12 @@
 import React from "react";
-import {SobreComponent} from "./styles";
+import {Container} from "../../../Styles/SobreStyle";
 
-export default function Sobre(){
+const Sobre = ()=>{
  return(
-   <SobreComponent>
+   <Container>
     <h1>Ezequias Blog's</h1>
-    
-   </SobreComponent>
+   </Container>
  );
 }
+
+export default Sobre;

@@ -2,10 +2,9 @@ import { getAllPosts } from "../../scripts/blog/getAllPosts";
 import { GetStaticProps, GetStaticPaths } from "next";
 import { useRouter } from "next/router";
 import { PropsPost } from "../../@types";
-import {PostComponent} from "./styles";
-import Link from "next/link";
+import {Container} from "../../../Styles/PostStyle";
 
-export default function Post({ post }: PropsPost) {
+const Post = ({ post }: PropsPost) =>{
   const { isFallback } = useRouter();
   if (isFallback) {
     return <h1>Loading...</h1>;
@@ -20,14 +19,14 @@ export default function Post({ post }: PropsPost) {
     }
   }
   return (
-    <PostComponent>
+    <Container>
       <h1>{post.metadata.title}</h1>
       <div className="content-article" onClick={()=>handleClick(event)} dangerouslySetInnerHTML={{ __html: `${post.content}` }} />
       <footer>
         <h4>&copy; Feito por | Ezequais Santos</h4>
         <span>Desenvolvedor front-end React.js / Next.js</span>
       </footer>
-    </PostComponent>
+    </Container>
   );
 }
 
@@ -54,3 +53,4 @@ export const getStaticProps: GetStaticProps = async (context) => {
     revalidate: 10
   };
 };
+export default Post;
