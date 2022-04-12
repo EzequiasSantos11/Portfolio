@@ -40,7 +40,7 @@ export default function Blog({ posts, gitUser }: PropsHome) {
       <Title id="posts">Posts do blog!</Title>
       <Wrapper>
         {data.map((post) => (
-          <Link key={post.metadata.slug} href={`/post/${post.metadata.slug}`}>
+          <Link key={post.metadata.slug} href={`/Post/${post.metadata.slug}`}>
               <Article>
                 <span>Publicado em {post.metadata.date}</span> <br />
                 <h2>{post.metadata.title}</h2>

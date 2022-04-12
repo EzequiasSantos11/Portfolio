@@ -11,6 +11,7 @@ export const Container = styled.article`
     font-weight: 900;
     font-size: 2rem;
     width: 60%;
+    text-align: center;
   }
   .content-article{
     width: 70%;
