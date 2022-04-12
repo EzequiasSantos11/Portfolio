@@ -102,8 +102,9 @@ export const Wrapper = styled.div`
   display: grid;
   width: 90%;
   max-width: 990px;
+  margin: 0 auto;
   margin-top: 30px;
-  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 `;
 
 
