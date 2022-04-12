@@ -1,0 +1,25 @@
+import { ThemeProvider } from "styled-components";
+import GlobalStyle from "../../Styles/GlobalStyle/index";
+import Heads from "../Components/Head";
+import HeaderComponent from "../Components/Header";
+import { useState } from "react";
+import dark from "../../Styles/Themes/dark";
+import light from "../../Styles/Themes/light";
+
+
+export default function App({ Component, pageProps }) {
+  const [ theme, setTheme ] = useState(light);
+  function toggleTheme(){
+    setTheme(theme.title === "dark" ? light : dark);
+  }
+  return (
+    <>
+      <Heads/>
+      <ThemeProvider theme={theme}>
+        <HeaderComponent toggleTheme={toggleTheme}/>
+        <GlobalStyle />
+        <Component {...pageProps} />
+      </ThemeProvider>
+    </>
+  );
+}

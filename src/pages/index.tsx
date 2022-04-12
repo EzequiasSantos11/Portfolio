@@ -1,7 +1,6 @@
 import {ImagesGithub, ImagesInstagram, ImagesWhatsApp } from "../Components/Images";
-import { Home, Article, Wrapper, Main } from "../Styles/HomeStyle";
+import { Home, Article, Wrapper, Main, Title } from "../../Styles/HomeStyle";
 import { getAllPosts } from "../scripts/blog/getAllPosts";
-import { HeaderComponent } from "../Components/Header";
 import { PropsHome } from "../@types";
 import Link from "next/link";
 
@@ -18,8 +17,7 @@ export default function Blog({ posts, gitUser }: PropsHome) {
   })
   return (
     <Home>
-      <HeaderComponent name={gitUser.name} avatar_url={gitUser.avatar_url} />
-      <Main>
+      <Main id="home">
         <div className="background">
           <img src="/laptop.jpg" alt="" />
           <div className="text">
@@ -39,17 +37,22 @@ export default function Blog({ posts, gitUser }: PropsHome) {
           </div>
         </div>
       </Main>
+      <Title id="posts">Posts do blog!</Title>
       <Wrapper>
         {data.map((post) => (
           <Link key={post.metadata.slug} href={`/post/${post.metadata.slug}`}>
               <Article>
-                <span>criado em {post.metadata.date}</span> <br />
+                <span>Publicado em {post.metadata.date}</span> <br />
                 <h2>{post.metadata.title}</h2>
                 <p>{post.metadata.excerpt}</p>
               </Article>
           </Link>
         ))}
       </Wrapper>
+      <footer>
+        <h4>&copy; Feito por | Ezequais Santos</h4>
+        <span>Desenvolvedor front-end React.js / Next.js</span>
+      </footer>
     </Home>
   );
 }
@@ -62,6 +65,7 @@ export async function getStaticProps() {
     props: {
       posts,
       gitUser
-    }
+    },
+    revalidate: 10,
   };
 }

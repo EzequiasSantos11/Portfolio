@@ -7,12 +7,21 @@ export const Header = styled.header`
   justify-content: space-around;
   height: 4rem;
   width: 100%;
-  background: #121214;
+  background: ${props => props.theme.colors.primary};
   position: fixed;
   top: 0;
   z-index: 999;
   .menuIcon{
     display: none;
+  }
+  .backLog{
+    position: fixed;
+    background: rgba(0,0,0,0.4);
+    height: 100vh;
+    width: 100vw;
+    top: 4rem;
+    left: 0;
+    z-index: 998;
   }
   
   .user-info{
@@ -26,6 +35,7 @@ export const Header = styled.header`
     h1 {
       font-size: 18px;
       margin: 0;
+      color: white;
     }
   }
   @media (max-width: 800px) {
@@ -41,6 +51,8 @@ export const Header = styled.header`
   }
   nav{
     display: flex;
+    align-items: center;
+    z-index: 999;
     ul{
       display: flex;
       li{
@@ -54,11 +66,12 @@ export const Header = styled.header`
    
     @media (max-width: 800px) {
       position: absolute;
-      background: #121214;
+      flex-direction: column;
+      background: ${props => props.theme.colors.primary};
       top: 4rem;
       width: 8rem;
-      height: 150px;
-      padding-left: 10px;
+      height: 180px;
+      padding-bottom: 20px;
       border-bottom-left-radius: 20px;
       transition: all .5s;
       ul{

@@ -9,6 +9,21 @@ export const Home = styled.section`
     height: 100%;
     padding-top: 4rem;
   }
+  footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 5rem;
+    margin-top: 40px;
+    h4{
+      margin-bottom: 10px;
+    }
+    span{
+      color: ${props => props.theme.colors.secondary};
+    }
+  }
 `;
 
 export const Main = styled.div`
@@ -42,6 +57,7 @@ export const Main = styled.div`
       border: 1px solid rgba(234, 47, 155, 0.3);
       h1{
         font-size: 24px;
+        color: wheat;
       }
       p{
         font-weight: 600;
@@ -77,37 +93,50 @@ export const Main = styled.div`
   }
 `;
 
+export const Title = styled.h1`
+  margin-top: 40px;
+  font-size: 34px;
+`;
+
 export const Wrapper = styled.div`
   display: grid;
   width: 90%;
-  margin-top: 40px;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  max-width: 990px;
+  margin-top: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
 `;
+
+
 
 export const Article = styled.article`
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-top: 20px;
-  height: 280px;
+  height: 300px;
   width: 100%;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  max-width: 600px;
+  margin: 0 auto;
+  box-shadow: ${props => props.theme.title === "light" ? "0 0 10px rgba(0, 0, 0, 0.5)" : "0 0 10px #0070f3"};
   border-radius: 20px;
   cursor: pointer;
   transition: all 0.3s;
   position: relative;
   transform: scale(0.9);
   &:hover{
-    transform: scale(1);
+    transform: scale(1.0);
     box-shadow: 0 0 10px rgb(99, 32, 99);
   }
   >h2{
-    margin-left: 40px;
+    width: 100%;
+    text-align: center;
   }
   >p{
     font-weight: 700;
+    font-family: 'Poppins', sans-serif;
     margin-top: 20px;
-    width: 70%;
+    width: 80%;
+    color: ${props => props.theme.colors.textColor}
   }
   >span{
     position: absolute;
@@ -115,5 +144,6 @@ export const Article = styled.article`
     bottom: 20px;
     left: 0;
     right: 0;
+    color: ${props => props.theme.colors.secondary}
   }
 `;
