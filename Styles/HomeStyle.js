@@ -44,11 +44,11 @@ export const Main = styled.div`
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      height: 65%;
-      width: 65%;
+      text-align: center;
+      width: 80%;
+      max-width: 500px;
       z-index: 98;
-      padding: 0 24px;
-      margin-top: 40px;
+      padding:  24px;
       border-radius: 16px;
       background: rgba(0, 0, 0, 0.4);
       box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
@@ -60,24 +60,21 @@ export const Main = styled.div`
         color: wheat;
       }
       p{
-        font-weight: 600;
-        font-size: 18px;
+        font-size: 14px;
         color: white;
-        z-index: 98;
-        margin-top: 10px;
-        line-height: 25 px;
+        width: 80%;
+        margin: 10px 0;
       }
       .sotial-mideas{
         display: flex;
         justify-content: space-around;
         height: 60px;
-        width: 50%;
-        margin-top: 20px;
+        width: 80%;
         a{
           svg{
             position: initial;
             height: 100%;
-            width: 100%;
+            width: 40px;
           }
         }
       }
@@ -88,9 +85,7 @@ export const Main = styled.div`
       position: absolute;
     }
   }
-  @media (max-width: 800px){
-    display: none;
-  }
+ 
 `;
 
 export const Title = styled.h1`
@@ -113,7 +108,7 @@ export const Article = styled.article`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 20px;
+  justify-content: center;
   height: 300px;
   width: 100%;
   max-width: 600px;
@@ -129,22 +124,37 @@ export const Article = styled.article`
     box-shadow: 0 0 10px rgb(99, 32, 99);
   }
   >h2{
-    width: 100%;
+    font-size: 20px;
+    width: 90%;
     text-align: center;
-  }
-  >p{
     font-weight: 700;
     font-family: 'Poppins', sans-serif;
-    margin-top: 20px;
+  }
+  >p{
+    font-family: 'Poppins', sans-serif;
     width: 80%;
+    font-size: 14px;
+    margin: 20px 0;
+    font-weight: 600;
     color: ${props => props.theme.colors.textColor}
   }
   >span{
     position: absolute;
-    text-align: center;
     bottom: 20px;
-    left: 0;
-    right: 0;
+    text-align: center;
+    opacity: 0.6;
     color: ${props => props.theme.colors.secondary}
   }
+  @media (max-width: 800px) {
+    &:hover{
+      transform: scale(0.9);
+      box-shadow: 0 0 10px rgb(99, 32, 99); 
+    }
+  }
+`;
+export const Anuncio = styled.div`
+  display: flex;
+  width: 70%;
+  height: 100px;
+  margin-top: 60px;
 `;
