@@ -15,7 +15,7 @@ export function SwitchButton({toggleTheme}: PropsSwitch){
   }
   return(
     <Container className="switch" onClick={Toggle}>
-      <span className={onToggleTheme ? "" : "off"}></span>
+      <span className={onToggleTheme ? "off" : ""}></span>
       <ImagesSolIcon  />
       <img className="lua" src="/luaIcon.png" alt="" />
     </Container>
