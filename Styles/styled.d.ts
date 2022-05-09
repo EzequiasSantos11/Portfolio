@@ -10,6 +10,7 @@ declare module 'styled-components'{
       textColor: string,
       titleColor: string,
       background: string,
+      linear: string
     }
   }
 }
