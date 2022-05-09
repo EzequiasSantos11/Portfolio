@@ -122,7 +122,7 @@ export const Apresentation = styled.div`
 export const Choece = styled.div`
 	display: flex;
 	flex-direction: column;
-	height: 100vh;
+	height: 100%;
 	padding-top: 7rem;
 	h2{
 		font-size: 2rem;
@@ -134,8 +134,9 @@ export const Choece = styled.div`
 	}
 	.cards{
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
 		gap: 40px;
+		height: 100%;
 		width: 90%;
 		margin: 0 auto;
 		margin-top: 4rem;
@@ -143,6 +144,7 @@ export const Choece = styled.div`
 			display: flex;
 			flex-direction: column;
 			height: 380px;
+			width: 100%;
 			border-radius: 20px;
 			background: ${props => props.theme.colors.primary};
 			h3{
@@ -181,6 +183,117 @@ export const Choece = styled.div`
 			.card{
 				width: 80%;
 				margin: 0 auto;
+			}
+		}
+	}
+`;
+
+export const Portifolio = styled.div`
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+	padding-top: 7rem;
+	h2{
+		font-size: 3rem;
+		font-weight: 800;
+		width: 70%;
+		margin: 0 auto;
+		text-align: center;
+		color: ${props => props.theme.colors.titleColor};
+	}
+	.wrapper{
+		display: flex;
+		flex-direction: column;
+		width: 80%;
+		margin: 0 auto;
+		margin-top: 6rem;
+		margin-bottom: 80px;
+		.card{
+			display: flex;
+			height: 320px;
+			width: 100%;
+			margin-bottom: 150px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+			img{
+				width: 50%;
+				height: 100%;
+			}
+			.textCard{
+				width: 60%;
+				h3{
+					color: ${props => props.theme.colors.secondary};
+					font-size: 46px;
+					width: 80%;
+					margin: 0 auto;
+					margin-top: 1.8rem;
+					font-weight: 800;
+				}
+				p,a{
+					font-size: 16px;
+					width: 80%;
+					margin: 20px auto;
+					color: ${props => props.theme.colors.textColor};
+					font-weight: 400;
+				}
+				a{
+					display: flex;
+					color: blue;
+				}
+			}
+		}
+	}
+	@media (max-width: 800px) {
+		padding-top: 6rem;
+		h2{
+			font-size: 25px;
+		}
+		.wrapper{
+			.card{
+				height: 100%;
+				flex-direction: column;
+				position: relative;
+				padding-top: 50%;
+				.textCard{
+					width: 100%;					
+					height: 100%;
+					h3{
+						font-size: 25px;
+					}
+					p{
+						margin: 1rem auto;
+						justify-content: stretch;
+					}
+				}
+				img{
+					position: absolute;
+					top: 0;
+					width: 100%;
+					height: 45%;
+				}
+			}
+		}
+	}
+	@media (max-width: 445px){
+		h2{
+			font-size: 20px;
+			width: 90%;
+		}
+		.wrapper{
+			.card{
+				img{
+					height: 30%;
+				}
+				.textCard{
+					h3{
+						font-size: 18px;
+					}
+					p{
+						font-size: 14px;
+					}
+					a{
+						font-size: 12px;
+					}
+				}
 			}
 		}
 	}

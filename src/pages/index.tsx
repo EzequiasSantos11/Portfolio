@@ -1,4 +1,4 @@
-import { Container, Apresentation, Choece } from "../../Styles/HomeStyle"
+import { Container, Apresentation, Choece, Portifolio } from "../../Styles/HomeStyle"
 import { Button } from "../Components/Button"
 
 
@@ -46,6 +46,46 @@ export default function Home(){
           </div>
         </div>
       </Choece>
+      <Portifolio>
+        <h2>Alguns dos projetos em que trabalhei!</h2>
+        <div className="wrapper">
+          <div className="card">
+            <div className="textCard">
+              <h3>Um projeto!</h3>
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis iste mollitia nemo earum libero commodi nostrum accusantium neque suscipit soluta, error voluptatum animi veritatis, beatae dolorum? Unde sunt autem optio?</p>
+              <a href="">ver este projeto</a>
+            </div>
+            <img src="/portifolio/ToDoDevs.png" alt="" />
+          </div>
+
+          <div className="card">
+            <img src="/portifolio/Dashboard.png" alt="" />
+            <div className="textCard">
+              <h3>Um projeto!</h3>
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis iste mollitia nemo earum libero commodi nostrum accusantium neque suscipit soluta, error voluptatum animi veritatis, beatae dolorum? Unde sunt autem optio?</p>
+              <a href="/">ver este projeto</a>
+            </div>
+          </div>
+
+          <div className="card">
+            <div className="textCard">
+              <h3>Um projeto!</h3>
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis iste mollitia nemo earum libero commodi nostrum accusantium neque suscipit soluta, error voluptatum animi veritatis, beatae dolorum? Unde sunt autem optio?</p>
+              <a href="">ver este projeto</a>
+            </div>
+            <img src="/portifolio/MusicStore.png" alt="" />
+          </div>
+
+          <div className="card">
+            <img src="/portifolio/NinjaMail.png" alt="" />
+            <div className="textCard">
+              <h3>Um projeto!</h3>
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis iste mollitia nemo earum libero commodi nostrum accusantium neque suscipit soluta, error voluptatum animi veritatis, beatae dolorum? Unde sunt autem optio?</p>
+              <a href="">ver este projeto</a>
+            </div>
+          </div>
+        </div>
+      </Portifolio>
     </Container> 
   )
 }
