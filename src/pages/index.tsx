@@ -42,7 +42,7 @@ export default function Home(){
         <div className="cards">
           <div className="card card1">
             <h3>React.js</h3>
-            <p>o React.js é um framework moderno e ultilizado por grandes empresas como Facebook, Walmart, instagram etc. Contudo o React.js é apenas uma ferramenta, uma estratégia de desenvolvimento padronizado, para sites escalaveis e responsivos. Ter um desenvolvedor que entende dessa ferramenta na sua equipe fará toda a diferença no desenvolvimento web.</p>
+            <p>o React.js é um framework moderno e ultilizado por grandes empresas como Facebook, Walmart, instagram etc. Contudo o React.js é apenas uma ferramenta, uma estratégia de desenvolvimento padronizado, para sites escaláveis e responsivos. Ter um desenvolvedor que entende dessa ferramenta na sua equipe fará toda a diferença no desenvolvimento web.</p>
             <a href="">
               <Button textButton="saiba mais"/>
             </a>
