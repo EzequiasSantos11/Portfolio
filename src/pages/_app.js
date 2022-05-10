@@ -8,7 +8,7 @@ import light from "../../Styles/Themes/light";
 
 
 export default function App({ Component, pageProps }) {
-  const [ theme, setTheme ] = useState(light);
+  const [ theme, setTheme ] = useState(dark);
   function toggleTheme(){
     setTheme(theme.title === "dark" ? light : dark);
   }

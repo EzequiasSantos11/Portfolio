@@ -69,14 +69,14 @@ export const Header = styled.header`
       flex-direction: column;
       background: ${props => props.theme.colors.primary};
       top: 4rem;
-      width: 8rem;
-      height: 180px;
-      padding-bottom: 20px;
+      width: 10rem;
+      height: 15rem;
+      padding: 20px 0;
       border-bottom-left-radius: 20px;
       transition: all .5s;
       ul{
         flex-direction: column;
-        height: 100%;
+        height: 80%;
         justify-content: center;
         li{
           height: 40px;
