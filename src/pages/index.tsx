@@ -27,7 +27,7 @@ export default function Home(){
           <div className="textApresentation">
             <span>Ezequias Santos</span>
             <h1>Desenvolvimento front end de qualidade!</h1>
-            <p>Seu site profissional feito por um proficional</p>
+            <p>Seu site profissional feito por um profissional</p>
             <a target={"_blank"} href="https://wa.link/l0y6hz">
               <Button textButton="Entrar em contato" />
               <ImagesWhatsApp/>
