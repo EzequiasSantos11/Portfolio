@@ -65,9 +65,20 @@ export const Apresentation = styled.div`
 			}
 			a{
 				margin-top: 40px;
-				width: 60%;
+				width: 50%;
 				height: 50px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				background: ${props => props.theme.colors.titleColor};
 				animation: ${AnimationApresentation} 2.5s;
+				svg{
+					height: 60%;
+				}
+				button{
+					width: 70%;
+					font-size: 16px;
+				}
 			}
 		}
 		.base{
@@ -107,6 +118,13 @@ export const Apresentation = styled.div`
 				border: none;
 				span, h1, p{
 					color: white;
+				}
+				a{
+					width: 50%;
+					button{
+						padding: 0;
+						font-size: 12px;
+					}
 				}
 			}
 			.base{

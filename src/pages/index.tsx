@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import { Container, Apresentation, Choece, Portifolio } from "../../Styles/HomeStyle"
 import { Button } from "../Components/Button"
+import { ImagesWhatsApp } from "../Components/Images";
 
 
 
@@ -27,8 +28,9 @@ export default function Home(){
             <span>Ezequias Santos</span>
             <h1>Desenvolvimento front end de qualidade!</h1>
             <p>Seu site profissional feito por um proficional</p>
-            <a>
-              <Button textButton="teste" />
+            <a target={"_blank"} href="https://wa.link/l0y6hz">
+              <Button textButton="Entrar em contato" />
+              <ImagesWhatsApp/>
             </a>
           </div>
           <span className="base"></span>
