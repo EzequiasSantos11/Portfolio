@@ -130,6 +130,7 @@ export const Article = styled.article`
     text-align: center;
     font-weight: 700;
     font-family: 'Poppins', sans-serif;
+    color: ${props => props.theme.colors.titleColor};
   }
   >p{
     font-family: 'Poppins', sans-serif;
