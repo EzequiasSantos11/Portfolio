@@ -3,7 +3,7 @@ import styled, {keyframes} from "styled-components";
 
 const AnimationApresentation = keyframes`
 	from{
-		transform: translateY(80px);
+		transform: translateY(90px);
 		opacity: 0;
 	}
 	to{
@@ -124,6 +124,25 @@ export const Choece = styled.div`
 	flex-direction: column;
 	height: 100%;
 	padding-top: 7rem;
+	&.animado{
+		.cards{
+			.card1{
+				transform: translateY(0);
+				opacity: 1;
+				transition: all .5s;
+			}
+			.card2{
+				transform: translateY(0);
+				transition: all 1s;
+				opacity: 1;
+			}
+			.card3{
+				transform: translateY(0);
+				transition: all 1.5s;
+				opacity: 1;
+			}
+		}
+	}
 	h2{
 		font-size: 2rem;
 		font-weight: 800;
@@ -146,6 +165,7 @@ export const Choece = styled.div`
 			height: 380px;
 			width: 100%;
 			border-radius: 20px;
+			transform: translateY(80px);
 			background: ${props => props.theme.colors.primary};
 			h3{
 				color: ${props => props.theme.title == "light" ? "#FFF" : props.theme.colors.secondary};
@@ -172,6 +192,21 @@ export const Choece = styled.div`
 				}
 			}
 		}
+		.card1{
+				transform: translateY(90px);
+				opacity: 0;
+				transition: all 1.5s;
+			}
+			.card2{
+				transform: translateY(90px);
+				transition: all 1s;
+				opacity: 0;
+			}
+			.card3{
+				transform: translateY(90px);
+				transition: all .5s;
+				opacity: 0;
+			}
 	}
 	@media (max-width: 800px) {
 		padding-top: 2rem;
@@ -179,10 +214,18 @@ export const Choece = styled.div`
 			width: 90%;
 		}
 		.cards{
+			width: 100%;
 			padding-bottom: 20px;
 			.card{
 				width: 80%;
 				margin: 0 auto;
+				a{
+					height: 40px;
+					button{
+						font-size: 14px;
+						padding: 0;
+					}
+				}
 			}
 		}
 	}
@@ -193,6 +236,7 @@ export const Portifolio = styled.div`
 	flex-direction: column;
 	height: 100vh;
 	padding-top: 7rem;
+	
 	h2{
 		font-size: 3rem;
 		font-weight: 800;
