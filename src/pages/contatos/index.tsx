@@ -50,9 +50,15 @@ export default function Contatos() {
         <h1>Vamos trabalhar juntos?</h1>
         <h2>Fique a vontade para entrar em contato comigo por uma de minhas redes sociais.</h2>
         <div className="sotialIcons">
-          <ImagesWhatsApp />
-          <ImagesInstagram />
-          <ImagesLinkedin />
+          <a target={"_blank"} href="https://contate.me/ezequiassantos">
+            <ImagesWhatsApp />
+          </a>
+          <a href="https://www.instagram.com/ezequias.dev/" target={"_blank"}>
+            <ImagesInstagram />
+          </a>
+          <a href="https://www.linkedin.com/in/ezequias-dev" target={"_blank"}>
+            <ImagesLinkedin />
+          </a>
         </div>
       </Apresentation>
       <Form className="form">
