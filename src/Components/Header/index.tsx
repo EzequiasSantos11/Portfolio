@@ -29,11 +29,6 @@ const HeaderComponent = ({toggleTheme}: PropsHeader)=>{
             </Link>
           </li>
           <li onClick={ () => setShowMenu(false) }>
-            <Link href={"/Sobre"}>
-              <a>Sobre</a>
-            </Link>
-          </li>
-          <li onClick={ () => setShowMenu(false) }>
             <Link href="/contatos">
               <a >Contatos</a>
             </Link>

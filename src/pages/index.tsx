@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import { Container, Apresentation, Choece, Portifolio } from "../../Styles/HomeStyle"
 import { Button } from "../Components/Button"
-import { ImagesWhatsApp } from "../Components/Images";
+import { ImagesGithub, ImagesWhatsApp } from "../Components/Images";
 
 
 
@@ -70,7 +70,10 @@ export default function Home(){
             <div className="textCard">
               <h3>Projeto ToDoDev!</h3>
               <p>O projeto ToDoDev ou TDD é um projeto de uma dashboard em construção, com a intenção de servir de apoio ao desinvolvimento de alguns Dev's. Com esta dashboard o Dev pode criar, editar e excluir listas de afazeres. Este projeto ainda não tem uma versão mobile 100% responsiva, pois ainda está em desenvolvimento.</p>
-              <a target={"_blank"} href="https://ezequias-todo-dev.vercel.app/deashboard">Visitar ToDoDev</a>
+              <div className="links">
+                <a target={"_blank"} href="https://ezequias-todo-dev.vercel.app/deashboard">Visitar ToDoDev</a>
+                <a target={"_blank"} href="https://github.com/EzequiasSantos11/TODev"><ImagesGithub/></a>
+              </div>
             </div>
             <img src="/portifolio/ToDoDevs.png" alt="" />
           </div>
@@ -80,7 +83,10 @@ export default function Home(){
             <div className="textCard">
               <h3>DevFinanças!</h3>
               <p>Assim como a anterior esta também é uma dashboard em construção que em breve terá sua versão mobile, porém o diferencial aqui é que esta dashboard é mais voltada a ajudar freelancers e Dev's que estão no mercado, a se organizarem com suas finanças em geral!</p>
-              <a target={"_blank"} href="https://dev-financas.vercel.app/">Visitar o DevFinanças</a>
+              <div className="links">
+                <a target={"_blank"} href="https://dev-financas.vercel.app/">Visitar o DevFinanças</a>
+                <a target={"_blank"} href="https://github.com/EzequiasSantos11/Project-Dashboard"><ImagesGithub/></a>
+              </div>
             </div>
           </div>
 
@@ -88,7 +94,10 @@ export default function Home(){
             <div className="textCard">
               <h3>MusicStore!</h3>
               <p>Quem não gosta de ouvir suas músicas favoritas enquanto esta desenvolvendo, não é mesmo? Pensando nisso eu criei o MusicStore, um clone do Spotify com algumas funções diferentes e a mais, este projeto ainda está em desenvolvimento, mas vale a pena dar um pulinho nele de vez em quando pois muito em breve estará 100% funcional. Esse sim tem versão mobile.</p>
-              <a target={"_blank"} href="https://ezequias-music-store.vercel.app/">Visitar MusicStore</a>
+              <div className="links">
+                <a target={"_blank"} href="https://ezequias-music-store.vercel.app/">Visitar MusicStore</a>
+                <a target={"_blank"} href="https://github.com/EzequiasSantos11/Music-Store"><ImagesGithub/></a>
+              </div>
             </div>
             <img src="/portifolio/MusicStore.png" alt="" />
           </div>
@@ -98,7 +107,10 @@ export default function Home(){
             <div className="textCard">
               <h3>Ninja Mail!</h3>
               <p>Talvez oque você precisa é apenas de um site bem estruturado clean e responsivo, que passe a mensagem e que cumpra seu propósito. Esse projeto tem tudo isso e um pouco mais, confira e comprove a qualidade do meu trabalho!</p>
-              <a target={"_blank"} href="https://ninja-mail-by-ezequiassantos.vercel.app/">Visitar Ninja Mail</a>
+              <div className="links">
+                <a target={"_blank"} href="https://ninja-mail-by-ezequiassantos.vercel.app/">Visitar Ninja Mail</a>
+                <a target={"_blank"} href="https://github.com/EzequiasSantos11/ninja-mail-by-ezequiassantos"><ImagesGithub/></a>
+              </div>
             </div>
           </div>
         </div>

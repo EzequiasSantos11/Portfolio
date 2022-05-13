@@ -297,6 +297,21 @@ export const Portifolio = styled.div`
 					color: ${props => props.theme.colors.textColor};
 					font-weight: 400;
 				}
+				.links{
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					width: 60%;
+					margin: 0 auto;
+					a{
+						margin: 0;
+						width: 100%;
+					}
+					svg{
+						width: 40px;
+						height: 40px;
+					}
+				}
 				a{
 					display: flex;
 					color: blue;
