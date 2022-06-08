@@ -306,14 +306,10 @@ export const Portifolio = styled.div`
 					width: 60%;
 					gap: 10px;
 					margin: 0 auto;
-					a{
-						margin: 0 auto;
-						width: 100%;
-					}
+					
 				}
 				a{
-					display: flex;
-					justify-content: center;
+					text-align: center;
 					color: blue;
 				}
 			}
