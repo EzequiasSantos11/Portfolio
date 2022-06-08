@@ -303,7 +303,7 @@ export const Portifolio = styled.div`
 					align-items: center;
 					justify-content: center;
 					text-align: center;
-					width: 60%;
+					width: 90%;
 					gap: 10px;
 					margin: 0 auto;
 					a{
