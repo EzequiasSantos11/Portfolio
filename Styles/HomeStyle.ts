@@ -302,7 +302,9 @@ export const Portifolio = styled.div`
 					flex-direction: column;
 					align-items: center;
 					justify-content: center;
+					text-align: center;
 					width: 60%;
+					gap: 10px;
 					margin: 0 auto;
 					a{
 						margin: 0;
