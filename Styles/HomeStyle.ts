@@ -303,16 +303,12 @@ export const Portifolio = styled.div`
 					align-items: center;
 					justify-content: center;
 					text-align: center;
-					width: 90%;
+					width: 60%;
 					gap: 10px;
 					margin: 0 auto;
 					a{
-						margin: 0;
+						margin: 0 auto;
 						width: 100%;
-					}
-					svg{
-						width: 40px;
-						height: 40px;
 					}
 				}
 				a{
