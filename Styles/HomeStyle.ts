@@ -313,6 +313,7 @@ export const Portifolio = styled.div`
 				}
 				a{
 					display: flex;
+					justify-content: center;
 					color: blue;
 				}
 			}
