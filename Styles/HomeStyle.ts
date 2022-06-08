@@ -299,6 +299,7 @@ export const Portifolio = styled.div`
 				}
 				.links{
 					display: flex;
+					flex-direction: column;
 					align-items: center;
 					justify-content: center;
 					width: 60%;
