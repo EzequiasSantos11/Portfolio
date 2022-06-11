@@ -1,4 +1,4 @@
-import styled, {keyframes} from "styled-components";
+import styled, { keyframes } from "styled-components";
 
 
 const AnimationApresentation = keyframes`
@@ -20,119 +20,111 @@ export const Container = styled.section`
 	align-items: center;
 	justify-content: center;
 	color: white;
+	width: 100%;
 	padding-top: 4rem;
+	.zap{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		position: fixed;
+		z-index: 9999;
+		bottom: 50px;
+		right: 30px;
+		height: 50px;
+		width: 50px;
+		background: green;
+		border-radius: 10px;
+		svg{
+			font-size: 2rem;
+			fill: #FFF;
+		}
+	}
+	.zap2{
+		display: none;
+	}
+	@media (max-width: 800px){
+		.zap1{
+			display: none;
+		}
+		.zap2{
+			display: flex;
+		}
+	}
 `;
 
 export const Apresentation = styled.div`
 	display: flex;
+	height: 100vh;
 	width: 100%;
-	height: 90vh;
-	background: #313268;
-	color: white;
-	.wrapper{
-		display: flex;
-		position: relative;
-		justify-content: center;
-		height: 60%;
+	background: #FFF;
+	color: #000;
+	img{
+		height: 100%;
 		width: 50%;
+		margin-top: -30px;
+	}
+	.right{
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		gap: 10px;
+		width: 40%;
 		margin: 0 auto;
-		margin-top: 4rem;
 		.textApresentation{
 			display: flex;
-			flex-direction: column;
 			justify-content: center;
-			width: 100%;
-			height: 100%;
-			top: 0;
-			padding-left: 30px;
-			position: absolute;
-			border: 20px solid black;
-			background: ${props => props.theme.colors.background};
-			span{
-				color: ${props => props.theme.colors.textColor};
-				animation: ${AnimationApresentation} 1s;
-			}
+			flex-direction: column;
+			gap: 20px;
+			width: 90%;
 			h1{
-				margin: 1rem 0;
+				font-size: 1.5rem;
+			}
+			h2{
 				font-size: 2rem;
-				color: ${props => props.theme.colors.textColor};
-				animation: ${AnimationApresentation} 1.5s;
 			}
 			p{
-			font-size: 1.3rem;
-				color: ${props => props.theme.colors.textColor};
-				animation: ${AnimationApresentation} 2s;
+				font-size: 1rem;
 			}
 			a{
-				margin-top: 40px;
 				width: 50%;
-				height: 50px;
-				display: flex;
-				align-items: center;
-				justify-content: center;
-				background: ${props => props.theme.colors.titleColor};
-				animation: ${AnimationApresentation} 2.5s;
-				svg{
-					height: 60%;
-				}
-				button{
-					width: 70%;
-					font-size: 16px;
-				}
-			}
-		}
-		.base{
-			display: flex;
-			height: 80px;
-			width: 40px;
-			background: black;
-			position: absolute;
-			bottom: -80px;
-			&::before{
-				content: "";
-				position: absolute;
-				bottom: -5px;
-				left: -20px;
-				width: 80px;
-				height: 40px;
-				background: black;
-				border-top-left-radius: 20px;
-				border-top-right-radius: 20px;
-				box-shadow: 0 18px 6px rgba(0,0,0,0.4);
+				margin: 0 auto;
 			}
 		}
 	}
-	img{
-		height: 200px;
-		width: 200px;
-		align-self: flex-end;
-		margin-right: 10%;
-		margin-bottom: 40px;
-	}
-	@media (max-width: 958px) {
-		.wrapper{
-			height: 80%;
-			width: 90%;
-			.textApresentation{
-				background: transparent;
-				border: none;
-				span, h1, p{
-					color: white;
-				}
-				a{
-					width: 50%;
-					button{
-						padding: 0;
-						font-size: 12px;
-					}
-				}
-			}
-			.base{
-				display: none;
-			}
-		}
+	@media (max-width: 800px){
+		position: relative;
+		height: 90vh;
 		img{
-			display: none;
+			width: 100%;
+		}
+		.right{
+			position: absolute;
+			z-index: 9999;
+			width: 100%;
+			height: 100%;
+			background: rgba(0,0,0,0.4);
+			.textApresentation{
+				margin: 0 auto;
+				gap: 10px;
+				width: 80%;
+				h1, h2, p, a{
+					color: #FFF;
+					font-size: 18px;
+				}
+				h1{
+					font-size: 20px;
+				}
+				h2{
+					font-size: 30px;
+				}
+				p{
+					font-size: 14px;
+				}
+				a, button{
+					height: 40px;
+					font-size: 12px;
+				}
+			}
 		}
 	}
 `;
@@ -140,53 +132,53 @@ export const Apresentation = styled.div`
 export const Choece = styled.div`
 	display: flex;
 	flex-direction: column;
-	height: 100%;
-	padding-top: 7rem;
+	height: 90vh;
+	padding-top: 8rem;
+	background: #FFF;
 	&.animado{
-		.cards{
-			.card1{
-				transform: translateY(0);
-				opacity: 1;
-				transition: all .5s;
-			}
-			.card2{
-				transform: translateY(0);
-				transition: all 1s;
-				opacity: 1;
-			}
-			.card3{
-				transform: translateY(0);
-				transition: all 1.5s;
-				opacity: 1;
-			}
-		}
+		// .cards{
+		// 	.card1{
+		// 		transform: translateY(0);
+		// 		opacity: 1;
+		// 		transition: all .5s;
+		// 	}
+		// 	.card2{
+		// 		transform: translateY(0);
+		// 		transition: all 1s;
+		// 		opacity: 1;
+		// 	}
+		// 	.card3{
+		// 		transform: translateY(0);
+		// 		transition: all 1.5s;
+		// 		opacity: 1;
+		// 	}
+		// }
 	}
 	h2{
 		font-size: 2rem;
-		font-weight: 800;
+		font-weight: 500;
 		width: 70%;
 		margin: 0 auto;
 		text-align: center;
-		color: ${props => props.theme.colors.titleColor};
+		color: #020203;
 	}
 	.cards{
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-		gap: 40px;
-		height: 100%;
+		display: flex;
+		height: 300px;
 		width: 90%;
 		margin: 0 auto;
-		margin-top: 4rem;
+		margin-top: 2rem;
 		.card{
 			display: flex;
 			flex-direction: column;
-			height: 380px;
+			justify-content: center;
+			align-items: center;
+			height: 100%;
 			width: 100%;
-			border-radius: 20px;
-			transform: translateY(80px);
-			background: ${props => props.theme.colors.primary};
+			border-radius: 4px;
+			background: #FFF;
 			h3{
-				color: ${props => props.theme.title == "light" ? "#FFF" : props.theme.colors.secondary};
+				color:#000;
 				font-size: 1.5rem;
 				width: 50%;
 				margin: 0 auto;
@@ -196,7 +188,8 @@ export const Choece = styled.div`
 			p{
 				width: 80%;
 				margin: 20px auto;
-				color: #f5f5f5;
+				text-align: center;
+				color: #000;
 				font-weight: 700;
 			}
 			a{
@@ -210,40 +203,32 @@ export const Choece = styled.div`
 				}
 			}
 		}
-		.card1{
-				transform: translateY(90px);
-				opacity: 0;
-				transition: all 1.5s;
+		.card2{
+			h3{ color: #FFF;}
+			p{
+				color: #FFF;
 			}
-			.card2{
-				transform: translateY(90px);
-				transition: all 1s;
-				opacity: 0;
-			}
-			.card3{
-				transform: translateY(90px);
-				transition: all .5s;
-				opacity: 0;
-			}
+			background: #1769FF;
+			box-shadow: 0 0 10px rgba(0,0,0,0.9);
+			margin-right: 10px;
+		}
 	}
 	@media (max-width: 800px) {
-		padding-top: 2rem;
+		flex-direction: column;
+		height: 100%;
 		h2{
+			font-size: 1.8rem;
 			width: 90%;
 		}
 		.cards{
-			width: 100%;
-			padding-bottom: 20px;
-			.card{
-				width: 80%;
-				margin: 0 auto;
-				a{
-					height: 40px;
-					button{
-						font-size: 14px;
-						padding: 0;
-					}
-				}
+			flex-direction: column;
+			height: 100%;
+			margin-bottom: 40px;
+			gap: 40px;
+			.card1, .card3{
+				background: #FFF;
+				box-shadow: 0 0 10px rgba(0,0,0,0.9);
+				margin-right: 10px;
 			}
 		}
 	}
@@ -252,125 +237,109 @@ export const Choece = styled.div`
 export const Portifolio = styled.div`
 	display: flex;
 	flex-direction: column;
-	height: 100vh;
-	padding-top: 7rem;
-	
+	height: 100%;
+	width: 100%;
+	padding-top: 6rem;
+	background: #FFF;
 	h2{
 		font-size: 3rem;
-		font-weight: 800;
+		font-weight: 500;
 		width: 70%;
 		margin: 0 auto;
 		text-align: center;
-		color: ${props => props.theme.colors.titleColor};
+		color: #020203;
 	}
 	.wrapper{
-		display: flex;
-		flex-direction: column;
-		width: 80%;
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		width: 90%;
 		margin: 0 auto;
-		margin-top: 6rem;
+		margin-top: 2rem;
 		margin-bottom: 80px;
+		gap: 20px;
 		.card{
 			display: flex;
 			height: 320px;
 			width: 100%;
-			margin-bottom: 150px;
-			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-			img{
-				width: 50%;
+			position: relative;
+			.text{
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				flex-direction: column;
+				position: absolute;
+				width: 100%;
 				height: 100%;
-			}
-			.textCard{
-				width: 60%;
+				opacity: 0;
+				top: 0;
+				border-radius: 5px;
+				background: rgba( 23, 105, 255, 0.4);
+				backdrop-filter: blur(6px);
+				-webkit-backdrop-filter: blur(5px);
+				z-index: 999;
+				transition: all .4s;
 				h3{
-					color: ${props => props.theme.colors.secondary};
-					font-size: 46px;
-					width: 80%;
-					margin: 0 auto;
-					margin-top: 1.8rem;
-					font-weight: 800;
+					color: #FFF;
+					font-size: 2rem;
 				}
-				p,a{
-					font-size: 16px;
-					width: 80%;
-					margin: 20px auto;
-					color: ${props => props.theme.colors.textColor};
-					font-weight: 400;
-				}
-				.links{
+				p{
 					display: flex;
-					align-items: center;
-					justify-content: center;
-					width: 60%;
+					color: #FFF;
+					font-size: 18px;
+					width: 80%;
+					margin: 10px auto;
+				}
+				button{
+					width: 50%;
 					margin: 0 auto;
+					margin-top: 20px;
+					height: 45px;
+					border-radius: 20px;
+					cursor: pointer;
+					border: none;
+					text-transform: uppercase;
+					font-size: 18px;
+					font-weight: 700;
+					background: #1769FF;
+					box-shadow: 0 0 20px #80ACF7;
+					transform: scale(1.08);
 					a{
-						margin: 0;
-						width: 100%;
+						
+						color: #FFF;
 					}
-					svg{
-						width: 40px;
-						height: 40px;
+					&:hover{
+						transition: all .2s ease-in-out;
+						transform: scale(1.1);
 					}
 				}
 				a{
-					display: flex;
-					color: blue;
+					margin-top: 10px;
+					color: #FFF;
+					cursor: pointer;
+				}
+				&:hover{
+					opacity: 1;
 				}
 			}
+			img{
+				transform: scale(.98);
+				box-shadow: 0 0 5px #000;
+				border-radius: 5px;
+				width: 100%;
+				height: 100%;
+				z-index: 1;
+			
+			}
+		
 		}
 	}
 	@media (max-width: 800px) {
-		padding-top: 6rem;
 		h2{
-			font-size: 25px;
+			font-size: 1.5rem;
 		}
 		.wrapper{
 			.card{
-				height: 100%;
-				flex-direction: column;
-				position: relative;
-				padding-top: 50%;
-				.textCard{
-					width: 100%;					
-					height: 100%;
-					h3{
-						font-size: 25px;
-					}
-					p{
-						margin: 1rem auto;
-						justify-content: stretch;
-					}
-				}
-				img{
-					position: absolute;
-					top: 0;
-					width: 100%;
-					height: 45%;
-				}
-			}
-		}
-	}
-	@media (max-width: 445px){
-		h2{
-			font-size: 20px;
-			width: 90%;
-		}
-		.wrapper{
-			.card{
-				img{
-					height: 30%;
-				}
-				.textCard{
-					h3{
-						font-size: 18px;
-					}
-					p{
-						font-size: 14px;
-					}
-					a{
-						font-size: 12px;
-					}
-				}
+				height: 200px;
 			}
 		}
 	}

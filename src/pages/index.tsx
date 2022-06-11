@@ -1,120 +1,100 @@
 import { useEffect, useState } from "react"
+import Link from "next/link";
 import { Container, Apresentation, Choece, Portifolio } from "../../Styles/HomeStyle"
 import { Button } from "../Components/Button"
 import { ImagesGithub, ImagesWhatsApp } from "../Components/Images";
+import { Footer } from "../Components/Footer";
+import { BsWhatsapp } from "react-icons/bs";
 
 
 
-export default function Home(){
+export default function Home() {
   const [on, setOn] = useState(false);
-  useEffect(()=>{
-    const scrollListener = ()=>{
-      if(window.scrollY > window.innerHeight-200){
+  useEffect(() => {
+    const scrollListener = () => {
+      if (window.scrollY > window.innerHeight - 200) {
         setOn(true);
-      }else{
+      } else {
         setOn(false);
       }
     }
-    window.addEventListener('scroll',scrollListener);
-    return ()=>{
+    window.addEventListener('scroll', scrollListener);
+    return () => {
       window.removeEventListener('scroll', scrollListener);
     }
-  },[]);
-  return(
+  }, []);
+  return (
     <Container>
-      <Apresentation>
-        <div className="wrapper">
+      <Apresentation id="Home">
+        <img src="/portifolio/programer.jpg" alt="" />
+        <div className="right">
           <div className="textApresentation">
-            <span>Ezequias Santos</span>
-            <h1>Desenvolvimento front end de qualidade!</h1>
-            <p>Seu site profissional feito por um profissional</p>
-            <a target={"_blank"} href="https://wa.link/l0y6hz">
-              <Button textButton="Entrar em contato" />
-              <ImagesWhatsApp/>
-            </a>
+            <h1>Olá, eu sou o Ezequias Santos</h1>
+            <h2>Desenvolvedor front-end React.js e Next.js!</h2>
+            <p>Atualmente focado em construir uma carreira sólida no mundo da programação, busco superar desafios a cada dia e me destacar no mercado de trabalho.</p>
+              <Link href="/#projetos">
+                <a>
+                 <Button textButton="Veja meu trabalho"/>
+                </a>
+              </Link>
           </div>
-          <span className="base"></span>
         </div>
-        <img src="/cat.png" alt="" />
       </Apresentation>
-      <Choece className={on ? "animado" : ""}>
-        <h2>Escolha a melhor estratégia para sua marca!</h2>
+      <Choece id="skils" className={on ? "animado" : ""}>
+        <h2>Minhas skils incluem</h2>
         <div className="cards">
           <div className="card card1">
             <h3>React.js</h3>
-            <p>o React.js é um framework moderno e ultilizado por grandes empresas como Facebook, Walmart, instagram etc. Contudo o React.js é apenas uma ferramenta, uma estratégia de desenvolvimento padronizado, para sites escaláveis e responsivos. Ter um desenvolvedor que entende dessa ferramenta na sua equipe fará toda a diferença no desenvolvimento web.</p>
-            <a href="">
-              <Button textButton="saiba mais"/>
-            </a>
+            <p>React.js é uma ferramenta/estratégia de desenvolvimento padronizado, para sites escaláveis e responsivos. </p>
           </div>
           <div className="card card2">
             <h3>Next.js</h3>
-            <p>Caso você queira dar um passo a mais e viu que precisa de algo que complemente o React.js para que seu site possa suprir uma alta demanda de páginas criadas dinâmicamentes como em um e-commerce por exemplo. O Nex.js é uma ferramenta que pode ser adicionada ao React.js e assim dando alguns super poderes além dos já citados. com ele seu site terá uma dinâmica mais acertiva e produtiva.</p>
-            <a href="">
-              <Button textButton="saiba mais"/>
-            </a>
+            <p>Para que seu site possa suprir uma alta demanda de páginas criadas dinâmicamente, como por exemplo em um e-commerce, o Next.js é a solução!</p>
           </div>
           <div className="card card3">
-            <h3>Node.js</h3>
-            <p>Agora você já escolheu entre React.js e Next.js, porém seu site precisa de dados do back-end, um local para armazenar e distribuir os dados de seus usuários. Com um backend bem estruturado é possível salvar dados de uma pessoa e ajudála a escolher produtos em sua loja on-line por exemplo, ou você pode simplesmente querer cadastrar usuários, alunos, produtos etc. Tudo isso é possível com o Node.js</p>
-            <a href="">
-              <Button textButton="saiba mais"/>
-            </a>
+            <h3>API REST</h3>
+            <p>A utilização de API's nos sites hoje em dia é um item imprecendível, já que o que mais importa nos sites são os dados que ele fornece e caso você precise pegar esses dados de um Backend essa é a solução.</p>
+            
           </div>
         </div>
       </Choece>
-      <Portifolio >
-        <h2>Alguns dos projetos em que trabalhei!</h2>
+      <Portifolio id="projetos">
+        <h2>Projetos em que trabalhei</h2>
         <div className="wrapper">
           <div className="card">
-            <div className="textCard">
-              <h3>Projeto ToDoDev!</h3>
-              <p>O projeto ToDoDev ou TDD é um projeto de uma dashboard em construção, com a intenção de servir de apoio ao desinvolvimento de alguns Dev's. Com esta dashboard o Dev pode criar, editar e excluir listas de afazeres. Este projeto ainda não tem uma versão mobile 100% responsiva, pois ainda está em desenvolvimento.</p>
-              <div className="links">
-                <a target={"_blank"} href="https://ezequias-todo-dev.vercel.app/deashboard">Visitar ToDoDev</a>
-                <a target={"_blank"} href="https://github.com/EzequiasSantos11/TODev"><ImagesGithub/></a>
-              </div>
-            </div>
             <img src="/portifolio/ToDoDevs.png" alt="" />
-          </div>
-
-          <div className="card">
-            <img src="/portifolio/Dashboard.png" alt="" />
-            <div className="textCard">
-              <h3>DevFinanças!</h3>
-              <p>Assim como a anterior esta também é uma dashboard em construção que em breve terá sua versão mobile, porém o diferencial aqui é que esta dashboard é mais voltada a ajudar freelancers e Dev's que estão no mercado, a se organizarem com suas finanças em geral!</p>
-              <div className="links">
-                <a target={"_blank"} href="https://dev-financas.vercel.app/">Visitar o DevFinanças</a>
-                <a target={"_blank"} href="https://github.com/EzequiasSantos11/Project-Dashboard"><ImagesGithub/></a>
-              </div>
+            <div className="text">
+              <h3>Dev finanças</h3>
+              <p>Uma deashboard estática ainda em desenvolvimento, ela ainda terá uma versão mobile e será usada para controle de finanças.</p>
+              <Button link="https://dev-financas.vercel.app/" textButton="Visitar site"/>              
+              <span className="separator"></span>
+              <a target="_blank" href="https://github.com/ezequiassantos11/Project-Dashboard">Ver no Github</a>
             </div>
           </div>
-
           <div className="card">
-            <div className="textCard">
-              <h3>MusicStore!</h3>
-              <p>Quem não gosta de ouvir suas músicas favoritas enquanto esta desenvolvendo, não é mesmo? Pensando nisso eu criei o MusicStore, um clone do Spotify com algumas funções diferentes e a mais, este projeto ainda está em desenvolvimento, mas vale a pena dar um pulinho nele de vez em quando pois muito em breve estará 100% funcional. Esse sim tem versão mobile.</p>
-              <div className="links">
-                <a target={"_blank"} href="https://ezequias-music-store.vercel.app/">Visitar MusicStore</a>
-                <a target={"_blank"} href="https://github.com/EzequiasSantos11/Music-Store"><ImagesGithub/></a>
-              </div>
-            </div>
             <img src="/portifolio/MusicStore.png" alt="" />
+            <div className="text">
+              <h3>Music Store</h3>
+              <p>Aplicativo também em desenvolvimento. É um clone não totalmente fiel ao spotfy, já que a ideia é deixá-lo com minha cara.</p>
+              <Button link="https://ezequias-music-store.vercel.app/" textButton="Visitar site" />
+              <a target="_blank" href="https://github.com/ezequiassantos11/Music-Store">Ver no Github</a>
+            </div>
           </div>
-
           <div className="card">
             <img src="/portifolio/NinjaMail.png" alt="" />
-            <div className="textCard">
-              <h3>Ninja Mail!</h3>
-              <p>Talvez oque você precisa é apenas de um site bem estruturado clean e responsivo, que passe a mensagem e que cumpra seu propósito. Esse projeto tem tudo isso e um pouco mais, confira e comprove a qualidade do meu trabalho!</p>
-              <div className="links">
-                <a target={"_blank"} href="https://ninja-mail-by-ezequiassantos.vercel.app/">Visitar Ninja Mail</a>
-                <a target={"_blank"} href="https://github.com/EzequiasSantos11/ninja-mail-by-ezequiassantos"><ImagesGithub/></a>
-              </div>
+            <div className="text">
+              <h3>Ninja-mail</h3>
+              <p>Site no estilo landing page, criado para promover um serviço de campanhas por email.</p>
+              <Button link="https://ninja-mail-by-ezequiassantos.vercel.app/" textButton="Visitar site"/>
+              <a className="separator"></a>
+              <a target="_blank" href="https://github.com/ezequiassantos11/ninja-mail-by-ezequiassantos">Ver no Github</a>
             </div>
           </div>
         </div>
       </Portifolio>
-    </Container> 
+      <Footer/>
+      <a target={"_blank"} href="https://contate.me/ezequiassantos-frontend" className="zap zap1"><BsWhatsapp/></a>
+      <a href="https://contate.me/ezequiassantos-frontend" className="zap zap2"><BsWhatsapp/></a>
+    </Container>
   )
 }
