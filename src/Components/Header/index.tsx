@@ -25,14 +25,19 @@ const HeaderComponent = ({toggleTheme, scroll}: PropsHeader)=>{
                 <a>Home</a>
               </Link>
             </li>
-            <li  onClick={ () => setShowMenu(false) }>
-              <Link href="/#skils">
-                <a>Skils</a>
+            <li>
+              <Link href="/#phases">
+                <a>Etapas da criação</a>
               </Link>
             </li>
             <li>
-              <Link href="/#projetos">
-                <a>Projetos</a>
+              <Link href="/#portfolio">
+                <a>Portfólio</a>
+              </Link>
+            </li>
+            <li>
+              <Link href="/#planos">
+                <a>Planos</a>
               </Link>
             </li>
             <li onClick={ () => setShowMenu(false) }>
