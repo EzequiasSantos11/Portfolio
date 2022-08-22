@@ -13,7 +13,7 @@ interface PropsData {
 }
 
 
-export default function Contatos() {
+export default function Contatos(props) {
   //useState para setar infos do formulário.
   const [contact, setContact] = useState<PropsData>({
     name: '',
@@ -21,7 +21,7 @@ export default function Contatos() {
     subject: 'StaticForms - Contact Form',
     honeypot: '', // if any value received in this field, form submission will be ignored.
     message: '', 
-    accessKey: process.env.NEXT_PUBLIC_ACCESS_KEY  // get your access key from https://www.staticforms.xyz
+    accessKey: `${props.accessKey}`  // get your access key from https://www.staticforms.xyz
   });
   //handleInput seta o setContact com as infos do form.
   const handleInput = e => setContact({ ...contact, [e.target.name]: [e.target.value] });
@@ -47,19 +47,22 @@ export default function Contatos() {
   return (
     <Container>
       <Apresentation className="apresentation">
-        <h1>Vamos trabalhar juntos?</h1>
-        <h2>Fique a vontade para entrar em contato comigo por uma de minhas redes sociais.</h2>
-        <div className="sotialIcons">
-          <a target={"_blank"} href="https://contate.me/ezequiassantos">
-            <ImagesWhatsApp />
-          </a>
-          <a href="https://www.instagram.com/ezequias.dev/" target={"_blank"}>
-            <ImagesInstagram />
-          </a>
-          <a href="https://www.linkedin.com/in/ezequias-dev" target={"_blank"}>
-            <ImagesLinkedin />
-          </a>
+        <div className="wrapper">
+          <h1>Vamos trabalhar juntos?</h1>
+          <h2>Fique a vontade para entrar em contato comigo por uma de minhas redes sociais.</h2>
+          <div className="sotialIcons">
+            <a target={"_blank"} href="https://contate.me/ezequiassantos">
+              <ImagesWhatsApp />
+            </a>
+            <a href="https://www.instagram.com/ezequias.dev/" target={"_blank"}>
+              <ImagesInstagram />
+            </a>
+            <a href="https://www.linkedin.com/in/ezequias-dev" target={"_blank"}>
+              <ImagesLinkedin />
+            </a>
+          </div>
         </div>
+        <img src="/portifolio/contact.jpg" alt="" />
       </Apresentation>
       <Form className="form">
         <form onSubmit={handleSubmit}>
@@ -108,4 +111,12 @@ export default function Contatos() {
       </Form>
     </Container>
   )
+}
+
+function getServerSideProps(){
+  return{
+    props:{
+      accessKey: process.env.NEXT_PUBLIC_ACCESS_KEY
+    }
+  }
 }

@@ -1,120 +1,157 @@
 import { useEffect, useState } from "react"
-import { Container, Apresentation, Choece, Portifolio } from "../../Styles/HomeStyle"
+import Link from "next/link";
+import { Container, Apresentation, About, Portfolio, Planos } from "../../Styles/HomeStyle"
 import { Button } from "../Components/Button"
 import { ImagesGithub, ImagesWhatsApp } from "../Components/Images";
+import { Footer } from "../Components/Footer";
+import { BsWhatsapp, BsCheck } from "react-icons/bs";
 
 
 
-export default function Home(){
+export default function Home() {
   const [on, setOn] = useState(false);
-  useEffect(()=>{
-    const scrollListener = ()=>{
-      if(window.scrollY > window.innerHeight-200){
+  useEffect(() => {
+    const scrollListener = () => {
+      if (window.scrollY > window.innerHeight - 200) {
         setOn(true);
-      }else{
+      } else {
         setOn(false);
       }
     }
-    window.addEventListener('scroll',scrollListener);
-    return ()=>{
+    window.addEventListener('scroll', scrollListener);
+    return () => {
       window.removeEventListener('scroll', scrollListener);
     }
-  },[]);
-  return(
+  }, []);
+  return (
     <Container>
-      <Apresentation>
-        <div className="wrapper">
+      <Apresentation id="Home">
+        <img src="/portifolio/programer.jpg" alt="" />
+        <div className="right">
           <div className="textApresentation">
-            <span>Ezequias Santos</span>
-            <h1>Desenvolvimento front end de qualidade!</h1>
-            <p>Seu site profissional feito por um profissional</p>
-            <a target={"_blank"} href="https://wa.link/l0y6hz">
-              <Button textButton="Entrar em contato" />
-              <ImagesWhatsApp/>
-            </a>
+            <h1>Olá, eu sou o <span>Ezequias Santos</span></h1>
+            <h2>Desenvolvedor front-end React.js e Next.js!</h2>
+            <p>Escalabilidade, inovação e autoridade. Tudo que um site precisa para se destacar na internet, basta fazer um orçamento e comprovar a qualidade.</p>
+            <Link href="/#projetos">
+              <a>
+                <Button textButton="Faça um orçamento" />
+              </a>
+            </Link>
           </div>
-          <span className="base"></span>
         </div>
-        <img src="/cat.png" alt="" />
       </Apresentation>
-      <Choece className={on ? "animado" : ""}>
-        <h2>Escolha a melhor estratégia para sua marca!</h2>
-        <div className="cards">
-          <div className="card card1">
-            <h3>React.js</h3>
-            <p>o React.js é um framework moderno e ultilizado por grandes empresas como Facebook, Walmart, instagram etc. Contudo o React.js é apenas uma ferramenta, uma estratégia de desenvolvimento padronizado, para sites escaláveis e responsivos. Ter um desenvolvedor que entende dessa ferramenta na sua equipe fará toda a diferença no desenvolvimento web.</p>
-            <a href="">
-              <Button textButton="saiba mais"/>
-            </a>
-          </div>
-          <div className="card card2">
-            <h3>Next.js</h3>
-            <p>Caso você queira dar um passo a mais e viu que precisa de algo que complemente o React.js para que seu site possa suprir uma alta demanda de páginas criadas dinâmicamentes como em um e-commerce por exemplo. O Nex.js é uma ferramenta que pode ser adicionada ao React.js e assim dando alguns super poderes além dos já citados. com ele seu site terá uma dinâmica mais acertiva e produtiva.</p>
-            <a href="">
-              <Button textButton="saiba mais"/>
-            </a>
-          </div>
-          <div className="card card3">
-            <h3>Node.js</h3>
-            <p>Agora você já escolheu entre React.js e Next.js, porém seu site precisa de dados do back-end, um local para armazenar e distribuir os dados de seus usuários. Com um backend bem estruturado é possível salvar dados de uma pessoa e ajudála a escolher produtos em sua loja on-line por exemplo, ou você pode simplesmente querer cadastrar usuários, alunos, produtos etc. Tudo isso é possível com o Node.js</p>
-            <a href="">
-              <Button textButton="saiba mais"/>
-            </a>
-          </div>
-        </div>
-      </Choece>
-      <Portifolio >
-        <h2>Alguns dos projetos em que trabalhei!</h2>
+      <About id="phases">
+        <h2>As <span>etapas de criação</span> são bem simples!</h2>
         <div className="wrapper">
           <div className="card">
-            <div className="textCard">
-              <h3>Projeto ToDoDev!</h3>
-              <p>O projeto ToDoDev ou TDD é um projeto de uma dashboard em construção, com a intenção de servir de apoio ao desinvolvimento de alguns Dev's. Com esta dashboard o Dev pode criar, editar e excluir listas de afazeres. Este projeto ainda não tem uma versão mobile 100% responsiva, pois ainda está em desenvolvimento.</p>
-              <div className="links">
-                <a target={"_blank"} href="https://ezequias-todo-dev.vercel.app/deashboard">Visitar ToDoDev</a>
-                <a target={"_blank"} href="https://github.com/EzequiasSantos11/TODev">Ver no Github</a>
-              </div>
-            </div>
-            <img src="/portifolio/ToDoDevs.png" alt="" />
+            <h3>Nos conte a sua idéia!</h3>
+            <a href="https://br.freepik.com/vetores-gratis/projeto-do-fundo-do-negocio_1072818.htm#query=ideia&position=5&from_view=search">
+              <img src="/portifolio/lampada-foguete.jpg" alt="Desenho vetoreal de uma lámpada amarela sob fundo azul do céu." />
+            </a>
+            <p>A primeira etapa é definir oque se é esperado desse site e quais funcionalidades ele terá. Não se preocupe, você será o regente dessa orquestra.</p>
           </div>
-
           <div className="card">
+            <h3>Expectativa Vs Realidade</h3>
+            <a href='https://br.freepik.com/fotos-vetores-gratis/empregado'>
+              <img src="/portifolio/prototipo-ideia.jpg" alt="" />
+            </a>
+            <p>
+              A segunda etapa é onde um protótipo será apresentado para aprovação, e assim que as expectaivas e todos os detalhes estiverem alinhadas, partimos para a próxima etapa.
+            </p>
+          </div>
+          <div className="card">
+            <h3>Mãos a obra</h3>
+            <a href='https://www.freepik.com/vectors/behavior'>
+              <img src="/portifolio/site.jpg" alt="" />
+            </a>
+            <p>Após um protótipo ser aprovado ele segue para a terceira etapa que é a de produção onde em poucos dias um site lindo, funcional e responsivo surgirá.</p>
+          </div>
+        </div>
+      </About>
+      <Portfolio id="portfolio">
+        <h2>Alguns casos de <span>sucesso</span></h2>
+        <p>Desde blog, e-commerce, landing page e muito mais. Elevando o desenvolvimento de sites a outro nível.</p>
+        <div className="wrapper">
+          <div className="projeto">
             <img src="/portifolio/Dashboard.png" alt="" />
-            <div className="textCard">
-              <h3>DevFinanças!</h3>
-              <p>Assim como a anterior esta também é uma dashboard em construção que em breve terá sua versão mobile, porém o diferencial aqui é que esta dashboard é mais voltada a ajudar freelancers e Dev's que estão no mercado, a se organizarem com suas finanças em geral!</p>
-              <div className="links">
-                <a target={"_blank"} href="https://dev-financas.vercel.app/">Visitar o DevFinanças</a>
-                <a target={"_blank"} href="https://github.com/EzequiasSantos11/Project-Dashboard">Ver no Github</a>
-              </div>
+            <h3>
+              <a href="">
+                Projeto um
+              </a>
+            </h3>
+            <p>Breve descrição do projeto um</p>
+          </div>
+          <div className="projeto">
+            <img src="/portifolio/Dashboard.png" alt="" />
+
+            <h3>
+              <a href="">
+                Projeto dois
+              </a>
+            </h3>
+            <p>Breve descrição do projeto dois</p>
+          </div>
+          <div className="projeto">
+            <img src="/portifolio/Dashboard.png" alt="" />
+            <h3>
+              <a href="">
+                Projeto três
+              </a>
+            </h3>
+            <p>Breve descrição do projeto três</p>
+          </div>
+          <div className="projeto">
+            <img src="/portifolio/Dashboard.png" alt="" />
+            <h3>
+              <a href="">
+                Projeto quatro
+              </a>
+            </h3>
+            <p>Breve descrição do projeto quatro</p>
+          </div>
+        </div>
+      </Portfolio>
+      <Planos id="planos">
+        <h2>Escolha um plano e vamos juntos construir o futuro</h2>
+        <div className="wrapper">
+          <div className="plano">
+            <div className="title basic">
+              <h3>Plano básico</h3>
+              <h4>Escolha um de nossos modelos de site pré aprovados, criado por um profissional UI/UX com muita experiência e autoridade no assunto.</h4>
+            </div>
+            <div className="description basic">
+              <strong>Apartir de R$ 650</strong>
+              <p> <BsCheck/> Site profissional responsivo e funcional baseado em modelo.</p>
+              <p> <BsCheck/> Um ano de domínio grátis.</p>
+              <p> <BsCheck/> Integração com API's.</p>
+              <p> <BsCheck/> Manutenção e suporte técnico gratuítos por um mês.</p>
+              <p> <BsCheck/> Plataforma de administração do site com até dois administradores (landing pages não incluso).</p>
+              <p><BsCheck/> Versão em portugês e inglês.</p>
+              <button className="basic">contratar</button>
             </div>
           </div>
-
-          <div className="card">
-            <div className="textCard">
-              <h3>MusicStore!</h3>
-              <p>Quem não gosta de ouvir suas músicas favoritas enquanto esta desenvolvendo, não é mesmo? Pensando nisso eu criei o MusicStore, um clone do Spotify com algumas funções diferentes e a mais, este projeto ainda está em desenvolvimento, mas vale a pena dar um pulinho nele de vez em quando pois muito em breve estará 100% funcional. Esse sim tem versão mobile.</p>
-              <div className="links">
-                <a target={"_blank"} href="https://ezequias-music-store.vercel.app/">Visitar MusicStore</a>
-                <a target={"_blank"} href="https://github.com/EzequiasSantos11/Music-Store">Ver no Github</a>
-              </div>
+          <div className="plano">
+            <div className="title master">
+              <h3>Plano master</h3>
+              <h4>Caso já tenha um desing ou deseja que criamos um para você este é o plano ideal pois nele você terá um site sob medida feito do zero.</h4>
             </div>
-            <img src="/portifolio/MusicStore.png" alt="" />
-          </div>
-
-          <div className="card">
-            <img src="/portifolio/NinjaMail.png" alt="" />
-            <div className="textCard">
-              <h3>Ninja Mail!</h3>
-              <p>Talvez oque você precisa é apenas de um site bem estruturado clean e responsivo, que passe a mensagem e que cumpra seu propósito. Esse projeto tem tudo isso e um pouco mais, confira e comprove a qualidade do meu trabalho!</p>
-              <div className="links">
-                <a target={"_blank"} href="https://ninja-mail-by-ezequiassantos.vercel.app/">Visitar Ninja Mail</a>
-                <a target={"_blank"} href="https://github.com/EzequiasSantos11/ninja-mail-by-ezequiassantos"><ImagesGithub/></a>
-              </div>
+            <div className="description master">
+            <strong>Necessário orçamento</strong>
+              <p> <BsCheck/> Site profissional responsivo e funcional de acordo com cliente.</p>
+              <p> <BsCheck/> Desing e marca pessoal exclusivos.</p>
+              <p> <BsCheck/> Um ano de domínio grátis.</p>
+              <p> <BsCheck/> Integração com API's.</p>
+              <p> <BsCheck/> Manutenção e suporte técnico gratuítos por três mês.</p>
+              <p> <BsCheck/> Plataforma de administração do site com até dois administradores.</p>
+              <p> <BsCheck/> Versão em portugês e inglês.</p>
+              <button className="master">contratar</button>
             </div>
           </div>
         </div>
-      </Portifolio>
-    </Container> 
+      </Planos>
+      <Footer />
+      <a target={"_blank"} href="https://contate.me/ezequiassantos-frontend" className="zap zap1"><BsWhatsapp /></a>
+      <a href="https://contate.me/ezequiassantos-frontend" className="zap zap2"><BsWhatsapp /></a>
+    </Container>
   )
 }

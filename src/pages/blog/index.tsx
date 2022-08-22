@@ -3,6 +3,7 @@ import { Container, Article, Wrapper, Main, Title, Anuncio } from "../../../Styl
 import { getAllPosts } from "../../scripts/blog/getAllPosts";
 import { PropsHome } from "../../@types";
 import Link from "next/link";
+import { Footer } from "../../Components/Footer";
 
 export default function Blog({ posts, gitUser }: PropsHome) {
 
@@ -21,8 +22,8 @@ export default function Blog({ posts, gitUser }: PropsHome) {
         <div className="background">
           <img src="/laptop.jpg" alt="" />
           <div className="text">
-            <h1>Seja bem vindo(a), EzequiasBlog, um blog de Jr pra Jr!</h1>
-            <p>Siga-me nas minhas redes sociais para mais conteúdo!</p>
+            <h1>Seja bem vindo(a) ao meu blog!</h1>
+            <p>Tecnologia | Atualidades | Tutoriais</p>
             <div className="sotial-mideas">
               <a href="">
                 <ImagesWhatsApp />
@@ -37,7 +38,7 @@ export default function Blog({ posts, gitUser }: PropsHome) {
           </div>
         </div>
       </Main>
-      <Title id="posts">Posts do blog!</Title>
+      <Title id="posts">Artigos!</Title>
       <Wrapper>
         {data.map((post) => (
           <Link key={post.metadata.slug} href={`/post/${post.metadata.slug}`}>
@@ -49,25 +50,7 @@ export default function Blog({ posts, gitUser }: PropsHome) {
           </Link>
         ))}
       </Wrapper>
-      <Anuncio>
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1405907005505819"
-        crossOrigin="anonymous"></script>
-        {/* <!-- home orizontal --> */}
-        <ins className="adsbygoogle"
-            style={{display: "block",  width: "100%", height: "100%"}}
-            data-ad-client="ca-pub-1405907005505819"
-            data-ad-slot="4323335309"
-            data-adtest="on"
-            data-ad-format="auto"
-            data-full-width-responsive="true"></ins>
-        <script>
-            (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
-      </Anuncio>
-      <footer>
-        <h4>&copy; Feito por | Ezequais Santos</h4>
-        <span>Desenvolvedor front-end React.js / Next.js</span>
-      </footer>
+      <Footer/>
     </Container>
   );
 }

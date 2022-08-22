@@ -6,40 +6,58 @@ import { SwitchButton } from "../SwitchButton";
 
 type PropsHeader ={
   toggleTheme: ()=>void,
+  scroll: boolean,
 }
 
-const HeaderComponent = ({toggleTheme}: PropsHeader)=>{
+const HeaderComponent = ({toggleTheme, scroll}: PropsHeader)=>{
   const [showMenu, setShowMenu] = useState(false);
   return(
     <Header>
-      <div className="user-info">
-        <img src="https://github.com/ezequiassantos11.png" alt="minha foto de perfil" />
-        <h1>Ezequias Santos</h1>
+      <div className={scroll ? "wrapper fixed" : "wrapper"}>
+        <div className="user-info">
+          <img src="https://github.com/ezequiassantos11.png" alt="minha foto de perfil" />
+          <h1>Ezequias Santos</h1>
+        </div>
+        <nav style={{right: showMenu ? '0': '-20rem'}}>
+          <ul>
+            <li  onClick={ () => setShowMenu(false) }>
+              <Link href="/#">
+                <a>Home</a>
+              </Link>
+            </li>
+            <li>
+              <Link href="/#phases">
+                <a>Etapas da criação</a>
+              </Link>
+            </li>
+            <li>
+              <Link href="/#portfolio">
+                <a>Portfólio</a>
+              </Link>
+            </li>
+            <li>
+              <Link href="/#planos">
+                <a>Planos</a>
+              </Link>
+            </li>
+            <li onClick={ () => setShowMenu(false) }>
+              <Link href={"/blog"}>
+                <a>Blog</a>
+              </Link>
+            </li>
+            <li onClick={ () => setShowMenu(false) }>
+              <Link href="/contatos">
+                <a className="button">Contate-me!</a>
+              </Link>
+            </li>
+          </ul>
+          {/* <SwitchButton toggleTheme={toggleTheme}/> */}
+        </nav>
+        <div className="menuIcon" onClick={ () => setShowMenu(!showMenu) }>
+          <ImagesMenuMobile />
+        </div>
+        <span className="backLog" style={{display: showMenu ? "flex" : "none"}} onClick={() => setShowMenu(!showMenu)}></span>
       </div>
-      <nav style={{right: showMenu ? '0': '-20rem'}}>
-        <ul>
-          <li  onClick={ () => setShowMenu(false) }>
-            <Link href="/">
-              <a>Home</a>
-            </Link>
-          </li>
-          <li onClick={ () => setShowMenu(false) }>
-            <Link href={"/blog"}>
-              <a>Blog</a>
-            </Link>
-          </li>
-          <li onClick={ () => setShowMenu(false) }>
-            <Link href="/contatos">
-              <a >Contatos</a>
-            </Link>
-          </li>
-        </ul>
-        <SwitchButton toggleTheme={toggleTheme}/>
-      </nav>
-      <div className="menuIcon" onClick={ () => setShowMenu(!showMenu) }>
-        <ImagesMenuMobile />
-      </div>
-      <span className="backLog" style={{display: showMenu ? "flex" : "none"}} onClick={() => setShowMenu(!showMenu)}></span>
   </Header>
   )
 }

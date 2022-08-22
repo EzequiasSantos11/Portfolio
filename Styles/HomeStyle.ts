@@ -1,4 +1,4 @@
-import styled, {keyframes} from "styled-components";
+import styled, { keyframes } from "styled-components";
 
 
 const AnimationApresentation = keyframes`
@@ -20,351 +20,327 @@ export const Container = styled.section`
 	align-items: center;
 	justify-content: center;
 	color: white;
+	width: 100%;
 	padding-top: 4rem;
+	.zap{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		position: fixed;
+		z-index: 9999;
+		bottom: 50px;
+		right: 30px;
+		height: 50px;
+		width: 50px;
+		background: green;
+		border-radius: 10px;
+		svg{
+			font-size: 2rem;
+			fill: #FFF;
+		}
+	}
+	.zap2{
+		display: none;
+	}
+	@media (max-width: 800px){
+		.zap1{
+			display: none;
+		}
+		.zap2{
+			display: flex;
+		}
+	}
 `;
 
 export const Apresentation = styled.div`
 	display: flex;
+	height: 100vh;
 	width: 100%;
-	height: 90vh;
-	background: #313268;
-	color: white;
-	.wrapper{
-		display: flex;
-		position: relative;
-		justify-content: center;
-		height: 60%;
+	background: #FFF;
+	color: #000;
+	img{
+		height: 100%;
 		width: 50%;
+		margin-top: -30px;
+	}
+	.right{
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		gap: 10px;
+		width: 40%;
 		margin: 0 auto;
-		margin-top: 4rem;
 		.textApresentation{
 			display: flex;
-			flex-direction: column;
 			justify-content: center;
+			flex-direction: column;
+			gap: 20px;
+			width: 90%;
+			h1{
+				font-size: 1.5rem;
+				span{
+					color: #1769FF;
+				}
+			}
+			h2{
+				font-size: 2.5rem;
+				color: #10176C;
+				font-weight: 800;
+			}
+			p{
+				font-size: 1.3rem;
+				color: gray;
+				font-weight: 600;
+			}
+			a{
+				width: 50%;
+				margin: 0 auto;
+			}
+		}
+	}
+	@media (max-width: 800px){
+		position: relative;
+		height: 90vh;
+		img{
+			width: 100%;
+		}
+		.right{
+			position: absolute;
+			z-index: 9999;
 			width: 100%;
 			height: 100%;
-			top: 0;
-			padding-left: 30px;
-			position: absolute;
-			border: 20px solid black;
-			background: ${props => props.theme.colors.background};
-			span{
-				color: ${props => props.theme.colors.textColor};
-				animation: ${AnimationApresentation} 1s;
-			}
-			h1{
-				margin: 1rem 0;
-				font-size: 2rem;
-				color: ${props => props.theme.colors.textColor};
-				animation: ${AnimationApresentation} 1.5s;
-			}
-			p{
-			font-size: 1.3rem;
-				color: ${props => props.theme.colors.textColor};
-				animation: ${AnimationApresentation} 2s;
-			}
-			a{
-				margin-top: 40px;
-				width: 50%;
-				height: 50px;
-				display: flex;
-				align-items: center;
-				justify-content: center;
-				background: ${props => props.theme.colors.titleColor};
-				animation: ${AnimationApresentation} 2.5s;
-				svg{
-					height: 60%;
-				}
-				button{
-					width: 70%;
-					font-size: 16px;
-				}
-			}
-		}
-		.base{
-			display: flex;
-			height: 80px;
-			width: 40px;
-			background: black;
-			position: absolute;
-			bottom: -80px;
-			&::before{
-				content: "";
-				position: absolute;
-				bottom: -5px;
-				left: -20px;
-				width: 80px;
-				height: 40px;
-				background: black;
-				border-top-left-radius: 20px;
-				border-top-right-radius: 20px;
-				box-shadow: 0 18px 6px rgba(0,0,0,0.4);
-			}
-		}
-	}
-	img{
-		height: 200px;
-		width: 200px;
-		align-self: flex-end;
-		margin-right: 10%;
-		margin-bottom: 40px;
-	}
-	@media (max-width: 958px) {
-		.wrapper{
-			height: 80%;
-			width: 90%;
+			background: rgba(0,0,0,0.4);
 			.textApresentation{
-				background: transparent;
-				border: none;
-				span, h1, p{
-					color: white;
+				margin: 0 auto;
+				gap: 10px;
+				width: 80%;
+				h1, h2, p, a{
+					color: #FFF;
+					font-size: 18px;
 				}
-				a{
-					width: 50%;
-					button{
-						padding: 0;
-						font-size: 12px;
-					}
+				h1{
+					font-size: 20px;
+				}
+				h2{
+					font-size: 30px;
+				}
+				p{
+					font-size: 14px;
+				}
+				a, button{
+					height: 40px;
+					font-size: 12px;
 				}
 			}
-			.base{
-				display: none;
-			}
-		}
-		img{
-			display: none;
 		}
 	}
 `;
 
-export const Choece = styled.div`
+export const About = styled.section`
 	display: flex;
 	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 	height: 100%;
-	padding-top: 7rem;
-	&.animado{
-		.cards{
-			.card1{
-				transform: translateY(0);
-				opacity: 1;
-				transition: all .5s;
-			}
-			.card2{
-				transform: translateY(0);
-				transition: all 1s;
-				opacity: 1;
-			}
-			.card3{
-				transform: translateY(0);
-				transition: all 1.5s;
-				opacity: 1;
-			}
-		}
-	}
+	width: 100%;
+	padding-top: 9rem;
+	margin-bottom: 3rem;
 	h2{
 		font-size: 2rem;
-		font-weight: 800;
-		width: 70%;
-		margin: 0 auto;
+		font-weight: 600;
+		margin-bottom: 4rem;
 		text-align: center;
-		color: ${props => props.theme.colors.titleColor};
+		span{
+			color: rgb(23,105,255);
+		}
 	}
-	.cards{
+	.wrapper{
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-		gap: 40px;
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		justify-content: center;
+		align-items: center;
 		height: 100%;
 		width: 90%;
-		margin: 0 auto;
-		margin-top: 4rem;
 		.card{
 			display: flex;
 			flex-direction: column;
-			height: 380px;
-			width: 100%;
-			border-radius: 20px;
-			transform: translateY(80px);
-			background: ${props => props.theme.colors.primary};
-			h3{
-				color: ${props => props.theme.title == "light" ? "#FFF" : props.theme.colors.secondary};
-				font-size: 1.5rem;
-				width: 50%;
-				margin: 0 auto;
-				text-align: center;
-				margin-top: 1.8rem;
-			}
-			p{
-				width: 80%;
-				margin: 20px auto;
-				color: #f5f5f5;
-				font-weight: 700;
-			}
-			a{
-				height: 50px;
-				width: 50%;
-				margin: 0 auto;
-				button{
-					font-size: 18px;
-					padding: 0;
-					border-radius: 20px;
-				}
-			}
-		}
-		.card1{
-				transform: translateY(90px);
-				opacity: 0;
-				transition: all 1.5s;
-			}
-			.card2{
-				transform: translateY(90px);
-				transition: all 1s;
-				opacity: 0;
-			}
-			.card3{
-				transform: translateY(90px);
-				transition: all .5s;
-				opacity: 0;
-			}
-	}
-	@media (max-width: 800px) {
-		padding-top: 2rem;
-		h2{
+			align-items: center;
+			height: 350px;
 			width: 90%;
-		}
-		.cards{
-			width: 100%;
-			padding-bottom: 20px;
-			.card{
-				width: 80%;
-				margin: 0 auto;
-				a{
-					height: 40px;
-					button{
-						font-size: 14px;
-						padding: 0;
-					}
-				}
+			padding: 15px;
+			border-radius: 10px;
+			margin: 0 auto;
+			margin-bottom: 30px;
+			box-shadow: 0 0 4px rgba(23,105,255,0.4);
+			position: relative;
+			h3{
+				position: absolute;
+				color: white;
+				padding: 10px;
+				left: 0;
+				top: -20px;
+				border-radius: 10px;
+				background: #1769FF;
+			}
+      p{
+				font-size: 1.2rem;
+				margin-top: 10px;
+				margin-left: 10px;
+			}
+			img{
+				height: 150px;
+				box-shadow: 0 0 8px #FFF;
 			}
 		}
 	}
 `;
 
-export const Portifolio = styled.div`
+export const Portfolio = styled.section`
 	display: flex;
 	flex-direction: column;
-	height: 100vh;
-	padding-top: 7rem;
-	
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	width: 100%;
+	padding-top: 9rem;
+	margin-bottom: 3rem;
 	h2{
-		font-size: 3rem;
-		font-weight: 800;
-		width: 70%;
-		margin: 0 auto;
-		text-align: center;
-		color: ${props => props.theme.colors.titleColor};
+		font-size: 2.5rem;
+		font-weight: 400;
+		margin-bottom: 1rem;
+		span{
+			color: #2C69FF;
+			font-weight: 600;
+		}
+	}
+	p{
+		font-size: 1.2rem;
+		margin-bottom: 2.5rem;
 	}
 	.wrapper{
-		display: flex;
-		flex-direction: column;
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+		justify-content: center;
+		align-items: center;
+		height: 100%;
+		width: 90%;
+		.projeto{
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			height: 250px;
+			width: 350px;
+			margin: 20px auto;
+			img{
+				height: 60%;
+				width: 100%;
+				margin: 0 auto;
+				border-radius: 5px;
+				box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+				&:hover{
+					cursor: pointer;
+					transform: scale(1.02);
+				}
+				transition: all .2s ease-in-out;
+			}
+			h3{
+				font-size: 1.5rem;
+				margin-top: 20px;
+			}
+		}
+	}
+`;
+
+
+export const Planos = styled.section`
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	width: 100%;
+	margin-bottom: 3rem;
+	padding-top: 10rem;
+	h2{
+		font-size: 2rem;
+		font-weight: 600;
+		margin-bottom: 3rem;
+	}
+	p{
 		width: 80%;
 		margin: 0 auto;
-		margin-top: 6rem;
-		margin-bottom: 80px;
-		.card{
+	}
+	.wrapper{
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+		justify-content: center;
+		align-items: center;
+		height: 100%;
+		width: 90%;
+		max-width: 1000px;
+		margin: 0 auto;
+		.plano{
 			display: flex;
-			height: 320px;
-			width: 100%;
-			margin-bottom: 150px;
-			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-			img{
-				width: 50%;
-				height: 100%;
-			}
-			.textCard{
-				width: 60%;
-				h3{
-					color: ${props => props.theme.colors.secondary};
-					font-size: 46px;
-					width: 80%;
-					margin: 0 auto;
-					margin-top: 1.8rem;
-					font-weight: 800;
-				}
-				p,a{
-					font-size: 16px;
-					width: 80%;
-					margin: 20px auto;
-					color: ${props => props.theme.colors.textColor};
-					font-weight: 400;
-				}
-				.links{
-					display: flex;
-					flex-direction: column;
-					align-items: center;
-					justify-content: center;
-					text-align: center;
-					width: 60%;
-					gap: 10px;
-					margin: 0 auto;
-					
-				}
-				a{
-					text-align: center;
-					color: blue;
-				}
-			}
-		}
-	}
-	@media (max-width: 800px) {
-		padding-top: 6rem;
-		h2{
-			font-size: 25px;
-		}
-		.wrapper{
-			.card{
-				height: 100%;
+			flex-direction: column;
+			width: 80%;
+			height: 100%;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+			margin: 0 auto;
+			border-radius: 10px;
+			.title{
+				display: flex;
 				flex-direction: column;
-				position: relative;
-				padding-top: 50%;
-				.textCard{
-					width: 100%;					
-					height: 100%;
-					h3{
-						font-size: 25px;
-					}
-					p{
-						margin: 1rem auto;
-						justify-content: stretch;
-					}
+				justify-content: center;
+				align-items: center;
+				width: 100%;
+				padding: 20px;
+				border-top-left-radius: 10px;
+				border-top-right-radius: 10px;
+				h3{
+					margin-bottom: 10px;
+					font-size: 1.3rem;
 				}
-				img{
-					position: absolute;
-					top: 0;
-					width: 100%;
-					height: 45%;
+				h3, h4{
+					color: #f0f0f0;
+				}
+				&.basic{
+					background: #1769FF;
+				}
+				&.master{
+					background: #10176C;
 				}
 			}
-		}
-	}
-	@media (max-width: 445px){
-		h2{
-			font-size: 20px;
-			width: 90%;
-		}
-		.wrapper{
-			.card{
-				img{
-					height: 30%;
+			.description{
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+				text-align: left;
+				padding: 20px 0;
+				height: 100%;
+				gap: 10px;
+				strong{
+					font-size: 1rem;
+					margin: 0 auto;
 				}
-				.textCard{
-					h3{
-						font-size: 18px;
+				button{
+					width: 50%;
+					height: 40px;
+					border-radius: 8px;
+					outline: none;
+					border: none;
+					font-size: 1.2rem;
+					font-weight: 500;
+					color: #f0f0f0;
+					cursor: pointer;
+					margin: 0 auto;
+					box-shadow: 0 0 6px rgba(0, 0, 0, 0.6);
+					margin-top: 10px;
+					&.basic{
+						background: #1769FF;
 					}
-					p{
-						font-size: 14px;
-					}
-					a{
-						font-size: 12px;
+					&.master{
+						background: #10176C;
 					}
 				}
 			}

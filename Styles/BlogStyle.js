@@ -91,15 +91,16 @@ export const Main = styled.div`
 export const Title = styled.h1`
   margin-top: 40px;
   font-size: 34px;
-  color: ${props => props.theme.colors.titleColor};
+  color: #020203;
 `;
 
 export const Wrapper = styled.div`
   display: grid;
+  height: 100%;
   width: 90%;
   max-width: 990px;
   margin: 0 auto;
-  margin-top: 30px;
+  margin: 40px 0;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 `;
 
@@ -114,15 +115,14 @@ export const Article = styled.article`
   width: 100%;
   max-width: 600px;
   margin: 0 auto;
-  box-shadow: ${props => props.theme.title === "light" ? "0 0 10px rgba(0, 0, 0, 0.5)" : "0 0 10px #0070f3"};
+  box-shadow:  0 0 10px #0070f3;
   border-radius: 20px;
   cursor: pointer;
   transition: all 0.3s;
   position: relative;
-  transform: scale(0.9);
+  transform: scale(0.98);
   &:hover{
-    transform: scale(1.0);
-    box-shadow: 0 0 10px rgb(99, 32, 99);
+    transform: scale(1);
   }
   >h2{
     font-size: 20px;
@@ -138,14 +138,14 @@ export const Article = styled.article`
     font-size: 14px;
     margin: 20px 0;
     font-weight: 600;
-    color: ${props => props.theme.colors.textColor}
+    color: #020203;
   }
   >span{
     position: absolute;
     bottom: 20px;
     text-align: center;
-    opacity: 0.6;
-    color: ${props => props.theme.colors.secondary}
+    opacity: 0.9;
+    color: rgb(23,105,255);
   }
   @media (max-width: 800px) {
     &:hover{
