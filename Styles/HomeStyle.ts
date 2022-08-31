@@ -514,7 +514,6 @@ export const Planos = styled.section`
 			}
 		}
 	}
-<<<<<<< HEAD
 	@media (max-width: 800px){
 		h2{
 			font-size: 24px;
@@ -525,6 +524,3 @@ export const Planos = styled.section`
 		}
 	}
 `;
-=======
-`;
->>>>>>> adefb9932926f12bba8597b34af59a134051bb73

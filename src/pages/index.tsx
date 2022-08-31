@@ -82,18 +82,10 @@ export default function Home() {
               <p>Breve descrição do projeto um</p>
             </a>
           </div>
-<<<<<<< HEAD
           <div className="projeto" data-value="2">
             <a target="_blank" href="">
               <img src="/portifolio/Dashboard.png" alt="" />
               <h3>
-=======
-          <div className="projeto">
-            <img src="/portifolio/Dashboard.png" alt="" />
-
-            <h3>
-              <a href="">
->>>>>>> adefb9932926f12bba8597b34af59a134051bb73
                 Projeto dois
               </h3>
               <p>Breve descrição do projeto dois</p>
