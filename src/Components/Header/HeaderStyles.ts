@@ -27,7 +27,7 @@ export const Header = styled.header`
       background: rgba(0,0,0,0.4);
       height: 100vh;
       width: 100vw;
-      top: 4rem;
+      top: 5rem;
       left: 0;
       z-index: 998;
     }
@@ -49,6 +49,7 @@ export const Header = styled.header`
     @media (max-width: 800px) {
       justify-content: space-between;
       padding: 0 20px;
+      height: 5rem;
       .menuIcon{
         display: flex;
         cursor: pointer;
@@ -79,9 +80,9 @@ export const Header = styled.header`
         position: absolute;
         flex-direction: column;
         background: #FFF;
-        top: 4rem;
-        width: 10rem;
-        height: 15rem;
+        top: 5rem;
+        width: 15rem;
+        height: 20rem;
         padding: 20px 0;
         border-bottom-left-radius: 20px;
         transition: all .5s;
