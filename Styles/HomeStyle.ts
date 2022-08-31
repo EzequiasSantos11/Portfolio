@@ -93,7 +93,9 @@ export const Apresentation = styled.div`
 				font-weight: 600;
 			}
 			a{
-				width: 50%;
+				height: 48px;
+				padding: 0 16px;
+				width: 60%;
 				margin: 0 auto;
 			}
 		}
@@ -112,8 +114,12 @@ export const Apresentation = styled.div`
 			background: rgba(0,0,0,0.4);
 			.textApresentation{
 				margin: 0 auto;
-				gap: 10px;
+				height: 60%;
 				width: 80%;
+				gap: 10px;
+				padding: 0 20px;
+				border-radius: 10px;
+				background: rgba(0,0,0,0.2);
 				h1, h2, p, a{
 					color: #FFF;
 					font-size: 18px;
@@ -122,13 +128,14 @@ export const Apresentation = styled.div`
 					font-size: 20px;
 				}
 				h2{
-					font-size: 30px;
+					font-size: 24px;
 				}
 				p{
-					font-size: 14px;
+					font-size: 12px;
 				}
 				a, button{
 					height: 40px;
+					width: 90%;
 					font-size: 12px;
 				}
 			}
@@ -143,7 +150,7 @@ export const About = styled.section`
 	justify-content: center;
 	height: 100%;
 	width: 100%;
-	padding-top: 9rem;
+	padding-top: 7.5rem;
 	margin-bottom: 3rem;
 	h2{
 		font-size: 2rem;
@@ -177,7 +184,7 @@ export const About = styled.section`
 				position: absolute;
 				color: white;
 				padding: 10px;
-				left: 0;
+				left: 15px;
 				top: -20px;
 				border-radius: 10px;
 				background: #1769FF;
@@ -193,6 +200,46 @@ export const About = styled.section`
 			}
 		}
 	}
+	@media (max-width: 800px) {
+		h2{
+			font-size: 1.5rem;
+			width: 80%;
+		}
+		.wrapper{
+			.card{
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				height: 330px;
+				width: 90%;
+				padding: 10px;
+				border-radius: 10px;
+				margin: 0 auto;
+				margin-bottom: 40px;
+				box-shadow: 0 0 4px rgba(23,105,255,0.4);
+				position: relative;
+				h3{
+					font-size: 14px;
+					position: absolute;
+					color: white;
+					padding: 5px 10px;
+					left: 15px;
+					top: -15px;
+					border-radius: 10px;
+					background: #1769FF;
+				}
+				p{
+					font-size: 18px;
+					margin-top: 10px;
+					margin-left: 10px;
+				}
+				img{
+					height: 130px;
+					box-shadow: 0 0 8px #FFF;
+				}
+			}
+		}
+	}
 `;
 
 export const Portfolio = styled.section`
@@ -202,7 +249,7 @@ export const Portfolio = styled.section`
 	justify-content: center;
 	height: 100%;
 	width: 100%;
-	padding-top: 9rem;
+	padding-top: 7.5rem;
 	margin-bottom: 3rem;
 	h2{
 		font-size: 2.5rem;
@@ -216,36 +263,156 @@ export const Portfolio = styled.section`
 	p{
 		font-size: 1.2rem;
 		margin-bottom: 2.5rem;
+		width: 90%;
+		margin: 0 auto;
 	}
-	.wrapper{
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+	.alice-carousel__prev-btn{
+		display: flex;
+		position: absolute;
+		top: 10%;
+		align-items: center;
+		justify-content: center;
+		width: 50px;
+		height: 120px;
+		margin-left: 40px;
+		opacity: 0;
+		transition: all .4s;
+		&:hover{
+			opacity: 1;
+		}
+		.alice-carousel__prev-btn-wrapper{
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 100%;
+			height: 100%;
+			.alice-carousel__prev-btn-item{
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				font-size: 4rem;
+				width: 100%;
+				height: 100%;
+				background: #1769FF;
+				padding: 0 30px;
+				margin: 0;
+				border-radius: 10px;
+				span{
+					color: #FFF;
+				}
+			}
+		}
+	}
+	.alice-carousel__next-btn{
+		display: flex;
+		position: absolute;
+		top: 10%;
+		align-items: center;
+		justify-content: center;
+		width: 50px;
+		height: 120px;
+		margin-right: 40px;
+		right: 0;
+		opacity: 0;
+		transition: all .4s;
+		&:hover{
+			opacity: 1;
+		}
+		.alice-carousel__next-btn-wrapper{
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 100%;
+			height: 100%;
+			.alice-carousel__next-btn-item{
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				font-size: 4rem;
+				width: 100%;
+				height: 100%;
+				background: #1769FF;
+				padding: 0 30px;
+				margin: 0;
+				border-radius: 10px;
+				span{
+					color: #FFF;
+				}
+			}
+		}
+	}
+	.alice-carousel{
+  	background: #FFF;
+		position: relative;
+		&:hover{
+			.alice-carousel__next-btn{
+				opacity: 0.5;
+			}
+			.alice-carousel__prev-btn{
+				opacity: 0.5;
+			}
+		}
+	}
+	
+	.projeto{
+		display: flex;
+		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		height: 100%;
+		height: 250px;
 		width: 90%;
-		.projeto{
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			height: 250px;
-			width: 350px;
-			margin: 20px auto;
-			img{
-				height: 60%;
-				width: 100%;
-				margin: 0 auto;
-				border-radius: 5px;
-				box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
-				&:hover{
-					cursor: pointer;
-					transform: scale(1.02);
+		margin: 20px auto;
+		img{
+			height: 60%;
+			width: 90%;
+			margin: 0 auto;
+			border-radius: 5px;
+			box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+			&:hover{
+				cursor: pointer;
+				transform: scale(1.02);
+			}
+			transition: all .2s ease-in-out;
+		}
+		h3{
+			font-size: 1.5rem;
+			width: 50%;
+			margin: 0 auto;
+			margin-top: 20px;
+		}
+	}
+	@media (max-width: 800px) {
+		h2{
+			font-size: 24px;
+		}
+		p{
+			font-size: 14px;
+			width: 90%;
+			margin: 0 auto;
+			text-align: center;
+		}
+		.alice-carousel{
+			background: #FFF;
+			position: relative;
+			&:hover{
+				.alice-carousel__next-btn{
+					opacity: 0;
 				}
-				transition: all .2s ease-in-out;
+				.alice-carousel__prev-btn{
+					opacity: 0;
+				}
+			}
+		}
+		.projeto{
+			margin-top: 40px;
+			img{
+				width: 100%;
 			}
 			h3{
-				font-size: 1.5rem;
-				margin-top: 20px;
+				font-size: 24px;
+			}
+			p{
+				font-size: 18px;
 			}
 		}
 	}
@@ -261,7 +428,7 @@ export const Planos = styled.section`
 	height: 100%;
 	width: 100%;
 	margin-bottom: 3rem;
-	padding-top: 10rem;
+	padding-top: 7.5rem;
 	h2{
 		font-size: 2rem;
 		font-weight: 600;
@@ -336,6 +503,7 @@ export const Planos = styled.section`
 					margin: 0 auto;
 					box-shadow: 0 0 6px rgba(0, 0, 0, 0.6);
 					margin-top: 10px;
+					text-transform: uppercase;
 					&.basic{
 						background: #1769FF;
 					}
@@ -346,4 +514,17 @@ export const Planos = styled.section`
 			}
 		}
 	}
+<<<<<<< HEAD
+	@media (max-width: 800px){
+		h2{
+			font-size: 24px;
+			width: 90%;
+		}
+		.wrapper{
+			gap: 40px;
+		}
+	}
 `;
+=======
+`;
+>>>>>>> adefb9932926f12bba8597b34af59a134051bb73

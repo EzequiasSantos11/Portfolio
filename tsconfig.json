@@ -22,7 +22,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
-  ],
+, "src/Components/AliceCarrousel/index.tsx"  ],
   "files": [
     "Styles/styled.d.ts"
   ],

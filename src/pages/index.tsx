@@ -4,6 +4,7 @@ import { Container, Apresentation, About, Portfolio, Planos } from "../../Styles
 import { Button } from "../Components/Button"
 import { ImagesGithub, ImagesWhatsApp } from "../Components/Images";
 import { Footer } from "../Components/Footer";
+import { Carousel } from "../Components/AliceCarrousel";
 import { BsWhatsapp, BsCheck } from "react-icons/bs";
 
 
@@ -71,46 +72,54 @@ export default function Home() {
       <Portfolio id="portfolio">
         <h2>Alguns casos de <span>sucesso</span></h2>
         <p>Desde blog, e-commerce, landing page e muito mais. Elevando o desenvolvimento de sites a outro nível.</p>
-        <div className="wrapper">
-          <div className="projeto">
-            <img src="/portifolio/Dashboard.png" alt="" />
-            <h3>
-              <a href="">
+        <Carousel>
+          <div className="projeto" data-value="1" style={{ height: "250px", width: "90%" }}>
+            <a target="_blank" href="">
+              <img src="/portifolio/Dashboard.png" alt="" />
+              <h3>
                 Projeto um
-              </a>
-            </h3>
-            <p>Breve descrição do projeto um</p>
+              </h3>
+              <p>Breve descrição do projeto um</p>
+            </a>
           </div>
+<<<<<<< HEAD
+          <div className="projeto" data-value="2">
+            <a target="_blank" href="">
+              <img src="/portifolio/Dashboard.png" alt="" />
+              <h3>
+=======
           <div className="projeto">
             <img src="/portifolio/Dashboard.png" alt="" />
 
             <h3>
               <a href="">
+>>>>>>> adefb9932926f12bba8597b34af59a134051bb73
                 Projeto dois
-              </a>
-            </h3>
-            <p>Breve descrição do projeto dois</p>
+              </h3>
+              <p>Breve descrição do projeto dois</p>
+            </a>
           </div>
-          <div className="projeto">
-            <img src="/portifolio/Dashboard.png" alt="" />
-            <h3>
-              <a href="">
+          <div className="projeto" data-value="3">
+            <a target="_blank" href="">
+              <img src="/portifolio/Dashboard.png" alt="" />
+              <h3>
                 Projeto três
-              </a>
-            </h3>
-            <p>Breve descrição do projeto três</p>
+              </h3>
+              <p>Breve descrição do projeto três</p>
+            </a>
           </div>
-          <div className="projeto">
-            <img src="/portifolio/Dashboard.png" alt="" />
-            <h3>
-              <a href="">
+          <div className="projeto" data-value="4">
+            <a target="_blank" href="">
+              <img src="/portifolio/Dashboard.png" data-value="4" alt="" />
+              <h3>
                 Projeto quatro
-              </a>
-            </h3>
-            <p>Breve descrição do projeto quatro</p>
+              </h3>
+              <p>Breve descrição do projeto quatro</p>
+            </a>
           </div>
-        </div>
+        </Carousel>
       </Portfolio>
+
       <Planos id="planos">
         <h2>Escolha um plano e vamos juntos construir o futuro</h2>
         <div className="wrapper">
@@ -121,12 +130,12 @@ export default function Home() {
             </div>
             <div className="description basic">
               <strong>Apartir de R$ 650</strong>
-              <p> <BsCheck/> Site profissional responsivo e funcional baseado em modelo.</p>
-              <p> <BsCheck/> Um ano de domínio grátis.</p>
-              <p> <BsCheck/> Integração com API's.</p>
-              <p> <BsCheck/> Manutenção e suporte técnico gratuítos por um mês.</p>
-              <p> <BsCheck/> Plataforma de administração do site com até dois administradores (landing pages não incluso).</p>
-              <p><BsCheck/> Versão em portugês e inglês.</p>
+              <p> <BsCheck /> Site profissional responsivo e funcional baseado em modelo.</p>
+              <p> <BsCheck /> Um ano de domínio grátis.</p>
+              <p> <BsCheck /> Integração com API's.</p>
+              <p> <BsCheck /> Manutenção e suporte técnico gratuítos por um mês.</p>
+              <p> <BsCheck /> Plataforma de administração do site com até dois administradores (landing pages não incluso).</p>
+              <p><BsCheck /> Versão em portugês e inglês.</p>
               <button className="basic">contratar</button>
             </div>
           </div>
@@ -136,19 +145,20 @@ export default function Home() {
               <h4>Caso já tenha um desing ou deseja que criamos um para você este é o plano ideal pois nele você terá um site sob medida feito do zero.</h4>
             </div>
             <div className="description master">
-            <strong>Necessário orçamento</strong>
-              <p> <BsCheck/> Site profissional responsivo e funcional de acordo com cliente.</p>
-              <p> <BsCheck/> Desing e marca pessoal exclusivos.</p>
-              <p> <BsCheck/> Um ano de domínio grátis.</p>
-              <p> <BsCheck/> Integração com API's.</p>
-              <p> <BsCheck/> Manutenção e suporte técnico gratuítos por três mês.</p>
-              <p> <BsCheck/> Plataforma de administração do site com até dois administradores.</p>
-              <p> <BsCheck/> Versão em portugês e inglês.</p>
+              <strong>Necessário orçamento</strong>
+              <p> <BsCheck /> Site profissional responsivo e funcional de acordo com cliente.</p>
+              <p> <BsCheck /> Desing e marca pessoal exclusivos.</p>
+              <p> <BsCheck /> Um ano de domínio grátis.</p>
+              <p> <BsCheck /> Integração com API's.</p>
+              <p> <BsCheck /> Manutenção e suporte técnico gratuítos por três mês.</p>
+              <p> <BsCheck /> Plataforma de administração do site com até dois administradores.</p>
+              <p> <BsCheck /> Versão em portugês e inglês.</p>
               <button className="master">contratar</button>
             </div>
           </div>
         </div>
       </Planos>
+
       <Footer />
       <a target={"_blank"} href="https://contate.me/ezequiassantos-frontend" className="zap zap1"><BsWhatsapp /></a>
       <a href="https://contate.me/ezequiassantos-frontend" className="zap zap2"><BsWhatsapp /></a>
