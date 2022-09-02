@@ -73,7 +73,7 @@ export default function Home() {
         <h2>Alguns casos de <span>sucesso</span></h2>
         <p>Desde blog, e-commerce, landing page e muito mais. Elevando o desenvolvimento de sites a outro nível.</p>
         <Carousel>
-          <div className="projeto" data-value="1" style={{ height: "250px", width: "90%" }}>
+          <div className="projeto" data-value="1">
             <a target="_blank" href="">
               <img src="/portifolio/Dashboard.png" alt="" />
               <h3>
@@ -107,6 +107,15 @@ export default function Home() {
                 Projeto quatro
               </h3>
               <p>Breve descrição do projeto quatro</p>
+            </a>
+          </div>
+          <div className="projeto" data-value="5">
+            <a target="_blank" href="">
+              <img src="/portifolio/Dashboard.png" data-value="4" alt="" />
+              <h3>
+                Projeto cinco
+              </h3>
+              <p>Breve descrição do projeto cinco</p>
             </a>
           </div>
         </Carousel>

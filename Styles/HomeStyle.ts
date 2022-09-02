@@ -197,6 +197,7 @@ export const About = styled.section`
 			img{
 				height: 150px;
 				box-shadow: 0 0 8px #FFF;
+				margin-top: 25px;
 			}
 		}
 	}
@@ -263,17 +264,15 @@ export const Portfolio = styled.section`
 	p{
 		font-size: 1.2rem;
 		margin-bottom: 2.5rem;
-		width: 90%;
-		margin: 0 auto;
 	}
 	.alice-carousel__prev-btn{
 		display: flex;
 		position: absolute;
-		top: 10%;
+		top: 0;
 		align-items: center;
 		justify-content: center;
 		width: 50px;
-		height: 120px;
+		height: 100%;
 		margin-left: 40px;
 		opacity: 0;
 		transition: all .4s;
@@ -284,8 +283,8 @@ export const Portfolio = styled.section`
 			display: flex;
 			align-items: center;
 			justify-content: center;
+			height: 50%;
 			width: 100%;
-			height: 100%;
 			.alice-carousel__prev-btn-item{
 				display: flex;
 				align-items: center;
@@ -306,13 +305,13 @@ export const Portfolio = styled.section`
 	.alice-carousel__next-btn{
 		display: flex;
 		position: absolute;
-		top: 10%;
+		top: 0;
+		right: 0;
 		align-items: center;
 		justify-content: center;
 		width: 50px;
-		height: 120px;
+		height: 100%;
 		margin-right: 40px;
-		right: 0;
 		opacity: 0;
 		transition: all .4s;
 		&:hover{
@@ -322,8 +321,8 @@ export const Portfolio = styled.section`
 			display: flex;
 			align-items: center;
 			justify-content: center;
+			height: 50%;
 			width: 100%;
-			height: 100%;
 			.alice-carousel__next-btn-item{
 				display: flex;
 				align-items: center;
@@ -342,8 +341,8 @@ export const Portfolio = styled.section`
 		}
 	}
 	.alice-carousel{
-  	background: #FFF;
 		position: relative;
+		background: blue;
 		&:hover{
 			.alice-carousel__next-btn{
 				opacity: 0.5;
@@ -357,15 +356,14 @@ export const Portfolio = styled.section`
 	.projeto{
 		display: flex;
 		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		height: 250px;
+		height: 260px;
 		width: 90%;
-		margin: 20px auto;
+		margin: 0 auto;
+		margin-top: 20px;
+		background: red;
 		img{
-			height: 60%;
-			width: 90%;
-			margin: 0 auto;
+			height: 130px;
+			width: 100%;
 			border-radius: 5px;
 			box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
 			&:hover{
@@ -375,7 +373,7 @@ export const Portfolio = styled.section`
 			transition: all .2s ease-in-out;
 		}
 		h3{
-			font-size: 1.5rem;
+			font-size: 1rem;
 			width: 50%;
 			margin: 0 auto;
 			margin-top: 20px;
