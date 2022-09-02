@@ -268,7 +268,7 @@ export const Portfolio = styled.section`
 	.alice-carousel__prev-btn{
 		display: flex;
 		position: absolute;
-		top: 0;
+		top: -60px;
 		align-items: center;
 		justify-content: center;
 		width: 50px;
@@ -283,7 +283,7 @@ export const Portfolio = styled.section`
 			display: flex;
 			align-items: center;
 			justify-content: center;
-			height: 50%;
+			height: 40%;
 			width: 100%;
 			.alice-carousel__prev-btn-item{
 				display: flex;
@@ -305,7 +305,7 @@ export const Portfolio = styled.section`
 	.alice-carousel__next-btn{
 		display: flex;
 		position: absolute;
-		top: 0;
+		top: -60px;
 		right: 0;
 		align-items: center;
 		justify-content: center;
@@ -321,7 +321,7 @@ export const Portfolio = styled.section`
 			display: flex;
 			align-items: center;
 			justify-content: center;
-			height: 50%;
+			height: 40%;
 			width: 100%;
 			.alice-carousel__next-btn-item{
 				display: flex;
@@ -342,7 +342,6 @@ export const Portfolio = styled.section`
 	}
 	.alice-carousel{
 		position: relative;
-		background: blue;
 		&:hover{
 			.alice-carousel__next-btn{
 				opacity: 0.5;
@@ -356,13 +355,14 @@ export const Portfolio = styled.section`
 	.projeto{
 		display: flex;
 		flex-direction: column;
+		align-items: center;
+		text-align: center;
 		height: 260px;
 		width: 90%;
 		margin: 0 auto;
 		margin-top: 20px;
-		background: red;
 		img{
-			height: 130px;
+			height: 150px;
 			width: 100%;
 			border-radius: 5px;
 			box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
@@ -373,10 +373,12 @@ export const Portfolio = styled.section`
 			transition: all .2s ease-in-out;
 		}
 		h3{
-			font-size: 1rem;
-			width: 50%;
-			margin: 0 auto;
-			margin-top: 20px;
+			font-size: 1.3rem;
+			width: 90%;
+			margin: 10px auto;
+		}
+		p{
+			font-size: 0.9rem;
 		}
 	}
 	@media (max-width: 800px) {
@@ -415,7 +417,6 @@ export const Portfolio = styled.section`
 		}
 	}
 `;
-
 
 export const Planos = styled.section`
 	display: flex;
