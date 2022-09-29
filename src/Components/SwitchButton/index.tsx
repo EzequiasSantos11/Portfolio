@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Container } from "./styles";
-import {ImagesSolIcon} from "../Images";
+import {ImageSolIcon} from "../Images";
 
 type PropsSwitch ={
   toggleTheme: ()=>void,
@@ -16,7 +16,7 @@ export function SwitchButton({toggleTheme}: PropsSwitch){
   return(
     <Container className="switch" onClick={Toggle}>
       <span className={onToggleTheme ? "off" : ""}></span>
-      <ImagesSolIcon  />
+      <ImageSolIcon  />
       <img className="lua" src="/luaIcon.png" alt="" />
     </Container>
   )
