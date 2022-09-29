@@ -62,10 +62,14 @@ export const Header = styled.header`
       ul{
         display: flex;
         li{
+         display: flex;
+      align-items: center;
          padding: 2px;
           align-items: center;
          border-radius: 4px;
           a{
+           display: flex;
+      align-items: center;
             height: 100%;
              align-items: center;
             font-size: 18px;
