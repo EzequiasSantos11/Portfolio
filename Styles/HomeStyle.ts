@@ -241,6 +241,7 @@ export const About = styled.section`
 			}
 		}
 	}
+
 `;
 
 export const Portfolio = styled.section`
@@ -432,6 +433,7 @@ export const Planos = styled.section`
 		font-size: 2rem;
 		font-weight: 600;
 		margin-bottom: 3rem;
+		text-align: center;
 	}
 	p{
 		width: 80%;

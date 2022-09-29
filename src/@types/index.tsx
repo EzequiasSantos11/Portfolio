@@ -1,6 +1,7 @@
 export type PropsPost ={
   post?:{
     metadata: {
+      tumbnail?: string,
     slug: string,
     content: string,
     title: string,
@@ -14,6 +15,7 @@ export type PropsPost ={
 export type PropsHome ={
   posts?:[{
     metadata: {
+      tumbnail?: string,
       slug: string,
       content: string,
       title: string,

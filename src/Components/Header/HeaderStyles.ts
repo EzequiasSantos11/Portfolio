@@ -8,7 +8,7 @@ export const Header = styled.header`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 6rem;
+    height: 4rem;
     width: 100%;
     padding-left: 4%;
     padding-right: 8.4%;
@@ -62,7 +62,10 @@ export const Header = styled.header`
       ul{
         display: flex;
         li{
+         padding: 2px;
+         border-radius: 4px;
           a{
+            height: 100%;
             font-size: 18px;
             margin: 0 10px;
             color: #000;
@@ -72,6 +75,12 @@ export const Header = styled.header`
             border-radius: 20px;
             color: #1769FF;
             font-weight: 800;
+          }
+          &.active{
+            background: #1769FF;
+            a{
+              color: #fff;
+            }
           }
         }
       }
