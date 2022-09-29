@@ -62,17 +62,16 @@ export const Header = styled.header`
       ul{
         display: flex;
         li{
+         padding: 2px;
+         border-radius: 4px;
+          a{
             display: flex;
             align-items: center;
-           border-radius: 4px;
-            a{
-              display: flex;
-              align-items: center;
-              height: 100%;
-              font-size: 18px;
-              margin: 0 10px;
-              color: #000;
-            }
+            height: 100%;
+            font-size: 18px;
+            margin: 0 10px;
+            color: #000;
+          }
           .button{
             padding: 8px 10px;
             border-radius: 20px;
@@ -100,7 +99,7 @@ export const Header = styled.header`
         transition: all .5s;
         ul{
           flex-direction: column;
-          height: 80%;
+          height: 50vh;
           justify-content: center;
           li{
             height: 40px;
