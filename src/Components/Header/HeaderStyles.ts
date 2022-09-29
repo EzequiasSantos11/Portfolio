@@ -63,9 +63,11 @@ export const Header = styled.header`
         display: flex;
         li{
          padding: 2px;
+          align-items: center;
          border-radius: 4px;
           a{
             height: 100%;
+             align-items: center;
             font-size: 18px;
             margin: 0 10px;
             color: #000;
@@ -78,7 +80,9 @@ export const Header = styled.header`
           }
           &.active{
             background: #1769FF;
+             align-items: center;
             a{
+             align-items: center;
               color: #fff;
             }
           }
