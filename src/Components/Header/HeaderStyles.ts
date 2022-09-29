@@ -103,6 +103,9 @@ export const Header = styled.header`
           justify-content: center;
           li{
             height: 40px;
+            &.active{
+              background: #fff;
+            }
             a{
               height: 100%;
             }
