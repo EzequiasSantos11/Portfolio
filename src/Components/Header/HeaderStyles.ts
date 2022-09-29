@@ -62,18 +62,17 @@ export const Header = styled.header`
       ul{
         display: flex;
         li{
-          display: flex;
-          align-items: center;
-         padding: 2px;
-         border-radius: 4px;
-          a{
             display: flex;
-          align-items: center;
-            height: 100%;
-            font-size: 18px;
-            margin: 0 10px;
-            color: #000;
-          }
+            align-items: center;
+           border-radius: 4px;
+            a{
+              display: flex;
+              align-items: center;
+              height: 100%;
+              font-size: 18px;
+              margin: 0 10px;
+              color: #000;
+            }
           .button{
             padding: 8px 10px;
             border-radius: 20px;
