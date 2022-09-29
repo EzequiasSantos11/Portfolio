@@ -86,6 +86,7 @@ export const Header = styled.header`
             background: #1769FF;
              align-items: center;
             a{
+            display: flex;
              align-items: center;
               color: #fff;
             }
@@ -110,6 +111,8 @@ export const Header = styled.header`
           li{
             height: 40px;
             a{
+              display: flex;
+              align-items: center;
               height: 100%;
             }
           }
