@@ -9,6 +9,8 @@ export function getAllPosts() {
   const posts = allPostsFileNames.map((filename) => {
     const fileContent = fs.readFileSync(`./src/posts/${filename}`, "utf-8");
     const { content, data: metadata } = grayMatter(fileContent);
+
+
     const htmlContent = remark()
       .use(remarkHTML)
       .processSync(content)
@@ -17,7 +19,7 @@ export function getAllPosts() {
     return {
       metadata: {
         ...metadata,
-        slug: filename.replace(".md", "")
+        slug: filename.replace(".md", ""),
       },
       content: htmlContent
     };

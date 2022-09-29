@@ -197,6 +197,7 @@ export const About = styled.section`
 			img{
 				height: 150px;
 				box-shadow: 0 0 8px #FFF;
+				margin-top: 25px;
 			}
 		}
 	}
@@ -240,6 +241,7 @@ export const About = styled.section`
 			}
 		}
 	}
+
 `;
 
 export const Portfolio = styled.section`
@@ -263,17 +265,15 @@ export const Portfolio = styled.section`
 	p{
 		font-size: 1.2rem;
 		margin-bottom: 2.5rem;
-		width: 90%;
-		margin: 0 auto;
 	}
 	.alice-carousel__prev-btn{
 		display: flex;
 		position: absolute;
-		top: 10%;
+		top: -60px;
 		align-items: center;
 		justify-content: center;
 		width: 50px;
-		height: 120px;
+		height: 100%;
 		margin-left: 40px;
 		opacity: 0;
 		transition: all .4s;
@@ -284,8 +284,8 @@ export const Portfolio = styled.section`
 			display: flex;
 			align-items: center;
 			justify-content: center;
+			height: 40%;
 			width: 100%;
-			height: 100%;
 			.alice-carousel__prev-btn-item{
 				display: flex;
 				align-items: center;
@@ -306,13 +306,13 @@ export const Portfolio = styled.section`
 	.alice-carousel__next-btn{
 		display: flex;
 		position: absolute;
-		top: 10%;
+		top: -60px;
+		right: 0;
 		align-items: center;
 		justify-content: center;
 		width: 50px;
-		height: 120px;
+		height: 100%;
 		margin-right: 40px;
-		right: 0;
 		opacity: 0;
 		transition: all .4s;
 		&:hover{
@@ -322,8 +322,8 @@ export const Portfolio = styled.section`
 			display: flex;
 			align-items: center;
 			justify-content: center;
+			height: 40%;
 			width: 100%;
-			height: 100%;
 			.alice-carousel__next-btn-item{
 				display: flex;
 				align-items: center;
@@ -342,7 +342,6 @@ export const Portfolio = styled.section`
 		}
 	}
 	.alice-carousel{
-  	background: #FFF;
 		position: relative;
 		&:hover{
 			.alice-carousel__next-btn{
@@ -357,15 +356,15 @@ export const Portfolio = styled.section`
 	.projeto{
 		display: flex;
 		flex-direction: column;
-		justify-content: center;
 		align-items: center;
-		height: 250px;
+		text-align: center;
+		height: 260px;
 		width: 90%;
-		margin: 20px auto;
+		margin: 0 auto;
+		margin-top: 20px;
 		img{
-			height: 60%;
-			width: 90%;
-			margin: 0 auto;
+			height: 150px;
+			width: 100%;
 			border-radius: 5px;
 			box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
 			&:hover{
@@ -375,10 +374,12 @@ export const Portfolio = styled.section`
 			transition: all .2s ease-in-out;
 		}
 		h3{
-			font-size: 1.5rem;
-			width: 50%;
-			margin: 0 auto;
-			margin-top: 20px;
+			font-size: 1.3rem;
+			width: 90%;
+			margin: 10px auto;
+		}
+		p{
+			font-size: 0.9rem;
 		}
 	}
 	@media (max-width: 800px) {
@@ -418,7 +419,6 @@ export const Portfolio = styled.section`
 	}
 `;
 
-
 export const Planos = styled.section`
 	display: flex;
 	flex-direction: column;
@@ -433,6 +433,7 @@ export const Planos = styled.section`
 		font-size: 2rem;
 		font-weight: 600;
 		margin-bottom: 3rem;
+		text-align: center;
 	}
 	p{
 		width: 80%;
@@ -514,7 +515,6 @@ export const Planos = styled.section`
 			}
 		}
 	}
-<<<<<<< HEAD
 	@media (max-width: 800px){
 		h2{
 			font-size: 24px;
@@ -525,6 +525,3 @@ export const Planos = styled.section`
 		}
 	}
 `;
-=======
-`;
->>>>>>> adefb9932926f12bba8597b34af59a134051bb73

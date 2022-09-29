@@ -10,7 +10,7 @@ interface CarouselProps {
 const responsive = {
   0: { items: 0},
   568: { items: 1 },
-  1024: { items: 6 },
+  1024: { items: 4 },
 };
 
 const Carousel = ({ children }: CarouselProps) => {

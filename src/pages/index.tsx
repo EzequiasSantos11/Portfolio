@@ -2,7 +2,6 @@ import { useEffect, useState } from "react"
 import Link from "next/link";
 import { Container, Apresentation, About, Portfolio, Planos } from "../../Styles/HomeStyle"
 import { Button } from "../Components/Button"
-import { ImagesGithub, ImagesWhatsApp } from "../Components/Images";
 import { Footer } from "../Components/Footer";
 import { Carousel } from "../Components/AliceCarrousel";
 import { BsWhatsapp, BsCheck } from "react-icons/bs";
@@ -42,38 +41,38 @@ export default function Home() {
         </div>
       </Apresentation>
       <About id="phases">
-        <h2>As <span>etapas de criação</span> são bem simples!</h2>
-        <div className="wrapper">
-          <div className="card">
-            <h3>Nos conte a sua idéia!</h3>
-            <a href="https://br.freepik.com/vetores-gratis/projeto-do-fundo-do-negocio_1072818.htm#query=ideia&position=5&from_view=search">
-              <img src="/portifolio/lampada-foguete.jpg" alt="Desenho vetoreal de uma lámpada amarela sob fundo azul do céu." />
-            </a>
-            <p>A primeira etapa é definir oque se é esperado desse site e quais funcionalidades ele terá. Não se preocupe, você será o regente dessa orquestra.</p>
-          </div>
-          <div className="card">
-            <h3>Expectativa Vs Realidade</h3>
-            <a href='https://br.freepik.com/fotos-vetores-gratis/empregado'>
-              <img src="/portifolio/prototipo-ideia.jpg" alt="" />
-            </a>
-            <p>
-              A segunda etapa é onde um protótipo será apresentado para aprovação, e assim que as expectaivas e todos os detalhes estiverem alinhadas, partimos para a próxima etapa.
-            </p>
-          </div>
-          <div className="card">
-            <h3>Mãos a obra</h3>
-            <a href='https://www.freepik.com/vectors/behavior'>
-              <img src="/portifolio/site.jpg" alt="" />
-            </a>
-            <p>Após um protótipo ser aprovado ele segue para a terceira etapa que é a de produção onde em poucos dias um site lindo, funcional e responsivo surgirá.</p>
-          </div>
+      <h2>As <span>etapas de criação</span> são bem simples!</h2>
+      <div className="wrapper">
+        <div className="card">
+          <h3>Nos conte a sua idéia!</h3>
+          <a href="https://br.freepik.com/vetores-gratis/projeto-do-fundo-do-negocio_1072818.htm#query=ideia&position=5&from_view=search">
+            <img src="/portifolio/lampada-foguete.jpg" alt="Desenho vetoreal de uma lámpada amarela sob fundo azul do céu." />
+          </a>
+          <p>A primeira etapa é definir oque se é esperado desse site e quais funcionalidades ele terá. Não se preocupe, você será o regente dessa orquestra.</p>
         </div>
+        <div className="card">
+          <h3>Expectativa Vs Realidade</h3>
+          <a href='https://br.freepik.com/fotos-vetores-gratis/empregado'>
+            <img src="/portifolio/prototipo-ideia.jpg" alt="" />
+          </a>
+          <p>
+            A segunda etapa é onde um protótipo será apresentado para aprovação, e assim que as expectaivas e todos os detalhes estiverem alinhadas, partimos para a próxima etapa.
+          </p>
+        </div>
+        <div className="card">
+          <h3>Mãos a obra</h3>
+          <a href='https://www.freepik.com/vectors/behavior'>
+            <img src="/portifolio/site.jpg" alt="" />
+          </a>
+          <p>Após um protótipo ser aprovado ele segue para a terceira etapa que é a de produção onde em poucos dias um site lindo, funcional e responsivo surgirá.</p>
+        </div>
+      </div>
       </About>
       <Portfolio id="portfolio">
         <h2>Alguns casos de <span>sucesso</span></h2>
         <p>Desde blog, e-commerce, landing page e muito mais. Elevando o desenvolvimento de sites a outro nível.</p>
         <Carousel>
-          <div className="projeto" data-value="1" style={{ height: "250px", width: "90%" }}>
+          <div className="projeto" data-value="1">
             <a target="_blank" href="">
               <img src="/portifolio/Dashboard.png" alt="" />
               <h3>
@@ -82,18 +81,10 @@ export default function Home() {
               <p>Breve descrição do projeto um</p>
             </a>
           </div>
-<<<<<<< HEAD
           <div className="projeto" data-value="2">
             <a target="_blank" href="">
               <img src="/portifolio/Dashboard.png" alt="" />
               <h3>
-=======
-          <div className="projeto">
-            <img src="/portifolio/Dashboard.png" alt="" />
-
-            <h3>
-              <a href="">
->>>>>>> adefb9932926f12bba8597b34af59a134051bb73
                 Projeto dois
               </h3>
               <p>Breve descrição do projeto dois</p>
@@ -115,6 +106,15 @@ export default function Home() {
                 Projeto quatro
               </h3>
               <p>Breve descrição do projeto quatro</p>
+            </a>
+          </div>
+          <div className="projeto" data-value="5">
+            <a target="_blank" href="">
+              <img src="/portifolio/Dashboard.png" data-value="4" alt="" />
+              <h3>
+                Projeto cinco
+              </h3>
+              <p>Breve descrição do projeto cinco</p>
             </a>
           </div>
         </Carousel>

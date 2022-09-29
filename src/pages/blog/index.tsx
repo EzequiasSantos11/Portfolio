@@ -1,11 +1,11 @@
-import {ImagesGithub, ImagesInstagram, ImagesWhatsApp } from "../../Components/Images";
-import { Container, Article, Wrapper, Main, Title, Anuncio } from "../../../Styles/BlogStyle";
+import { ImageGithub, ImageInstagram, ImageLinkedin, ImageWhatsApp} from "../../Components/Images";
+import { Container, Card, Wrapper, Main } from "../../../Styles/BlogStyle";
 import { getAllPosts } from "../../scripts/blog/getAllPosts";
 import { PropsHome } from "../../@types";
 import Link from "next/link";
 import { Footer } from "../../Components/Footer";
 
-export default function Blog({ posts, gitUser }: PropsHome) {
+export default function Blog({ posts }: PropsHome) {
 
   const data = posts.sort((a,b)=>{
    const dateA = new Date(a.metadata.date)
@@ -16,37 +16,36 @@ export default function Blog({ posts, gitUser }: PropsHome) {
      return 1;
    }
   })
+
   return (
     <Container>
       <Main>
-        <div className="background">
-          <img src="/laptop.jpg" alt="" />
-          <div className="text">
-            <h1>Seja bem vindo(a) ao meu blog!</h1>
-            <p>Tecnologia | Atualidades | Tutoriais</p>
-            <div className="sotial-mideas">
-              <a href="">
-                <ImagesWhatsApp />
-              </a>
-              <a href="">
-                <ImagesInstagram/>
-              </a>
-              <a href="">
-                <ImagesGithub />
-              </a>
-            </div>
-          </div>
+        <img src="/background-futuristic.jpg" alt="" />
+        <h1>Seja bem vindo(a) ao meu blog!</h1>
+        <p>Tudo sobre o mundo da tecnologia, com foco em frontend e uma pitada de humor. Faça uma boa leitura e caso tenha dicas ou sujestões para posts é só me chamar em uma de minhas redes sociais, será um prazer respondê-lo(a).</p>
+        <div className="sotialMideas">
+          <a className="first" target="_blank" href="https://instagram.com/ezequias.dev">
+            <ImageInstagram/>
+          </a>
+          <a className="second" target="_blank" href="https://github.com/ezequiassantos11">
+            <ImageGithub/>
+          </a>
+          <a className="tirst" target="_blank" href="https://linkedin.com/in/ezequias-dev">
+            <ImageLinkedin/>
+          </a>
         </div>
       </Main>
-      <Title id="posts">Artigos!</Title>
       <Wrapper>
         {data.map((post) => (
           <Link key={post.metadata.slug} href={`/post/${post.metadata.slug}`}>
-              <Article>
-                <h2>{post.metadata.title}</h2>
+              <Card>
+                <div className="image">
+                  <img src={post.metadata.tumbnail} alt="" />
+                  <h2>{post.metadata.title}</h2>
+                </div>
                 <p>{post.metadata.excerpt}</p>
                 <span>Publicado em {post.metadata.date}</span> <br />
-              </Article>
+              </Card>
           </Link>
         ))}
       </Wrapper>
@@ -57,12 +56,9 @@ export default function Blog({ posts, gitUser }: PropsHome) {
 
 export async function getStaticProps() {
   const posts = getAllPosts();
-  const data = await fetch("https://api.github.com/users/ezequiassantos11");
-  const gitUser = await data.json();
   return {
     props: {
       posts,
-      gitUser
     },
     revalidate: 10,
   };
