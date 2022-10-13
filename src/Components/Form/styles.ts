@@ -20,7 +20,14 @@ export const Container = styled.div`
   background: rgba( 0, 0, 0, 0.3 );
   position: fixed;
   top: 0;
+  flex-shrink: 0;
   z-index: 9999999;
+  span{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+  }
   form{
     display: flex;
     flex-direction: column;
@@ -35,6 +42,15 @@ export const Container = styled.div`
     gap: 15px;
     background: #1769FF;
     animation: ${Animation} .6s forwards;
+    position: relative;
+    i{
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      font-size: 18px;
+      color: #F1F1F1;
+      cursor: pointer;
+    }
     h1{
       width: 80%;
       text-align: center;
@@ -93,6 +109,25 @@ export const Container = styled.div`
         transition: all .2s ease-in-out;
         box-shadow: 0 0 20px #80ACF7;
         transform: scale(1.1);
+      }
+    }
+    @media (max-width: 800px) {
+      height: 70%;
+      min-height: 450px;
+      width: 90%;
+      h1{
+        font-size: 18px;
+      }
+      .input{
+        label{
+          font-size: 16px;
+        }
+        input{
+          height: 28px;
+        }
+        textarea{
+          height: 80px;
+        }
       }
     }
   }
