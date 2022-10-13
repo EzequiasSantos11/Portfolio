@@ -1,15 +1,14 @@
 import {Container} from "./buttonStyle";
-import Link from "next/link";
+import { ButtonHTMLAttributes } from "react";
 
-type PropsButton ={
+interface PropsButton extends ButtonHTMLAttributes<HTMLButtonElement> {
   textButton: string,
-  type?: string,
   link?: string,
 }
 
-export function Button({link, textButton}: PropsButton){
+export function Button({link, textButton, ...rest }: PropsButton){
   return(
-    <Container>
+    <Container {...rest}>
       <a target={"_blank"} href={link}>{textButton}</a>
     </Container>
   )

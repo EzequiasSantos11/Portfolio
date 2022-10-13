@@ -95,12 +95,12 @@ export const Main = styled.div`
     }
   }
   @media (max-width: 800px){
-    height: 50vh;
+    height: 65vh;
     h1{
-      font-size: 20px;
+      font-size: 1.5rem;
     }
     p{
-      font-size: 18px;
+      font-size: 16px;
       width: 80%;
     }
   }

@@ -92,7 +92,7 @@ export const Apresentation = styled.div`
 				color: gray;
 				font-weight: 600;
 			}
-			a{
+			button{
 				height: 48px;
 				padding: 0 16px;
 				width: 60%;

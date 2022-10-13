@@ -65,6 +65,8 @@ export const Header = styled.header`
          padding: 2px;
          border-radius: 4px;
           a{
+            display: flex;
+            align-items: center;
             height: 100%;
             font-size: 18px;
             margin: 0 10px;
@@ -97,10 +99,13 @@ export const Header = styled.header`
         transition: all .5s;
         ul{
           flex-direction: column;
-          height: 80%;
+          height: 50vh;
           justify-content: center;
           li{
             height: 40px;
+            &.active{
+              background: #fff;
+            }
             a{
               height: 100%;
             }

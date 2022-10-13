@@ -5,24 +5,12 @@ import { Button } from "../Components/Button"
 import { Footer } from "../Components/Footer";
 import { Carousel } from "../Components/AliceCarrousel";
 import { BsWhatsapp, BsCheck } from "react-icons/bs";
+import { Form } from "../Components/Form";
 
 
 
 export default function Home() {
-  const [on, setOn] = useState(false);
-  useEffect(() => {
-    const scrollListener = () => {
-      if (window.scrollY > window.innerHeight - 200) {
-        setOn(true);
-      } else {
-        setOn(false);
-      }
-    }
-    window.addEventListener('scroll', scrollListener);
-    return () => {
-      window.removeEventListener('scroll', scrollListener);
-    }
-  }, []);
+  const [ openForm, setOpenForm ] = useState(false);
   return (
     <Container>
       <Apresentation id="Home">
@@ -32,11 +20,10 @@ export default function Home() {
             <h1>Olá, eu sou o <span>Ezequias Santos</span></h1>
             <h2>Desenvolvedor front-end React.js e Next.js!</h2>
             <p>Escalabilidade, inovação e autoridade. Tudo que um site precisa para se destacar na internet, basta fazer um orçamento e comprovar a qualidade.</p>
-            <Link href="/#projetos">
-              <a>
-                <Button textButton="Faça um orçamento" />
-              </a>
-            </Link>
+            <Button
+              onClick={()=>setOpenForm(true)}
+              textButton="Entre em contato" 
+            />
           </div>
         </div>
       </Apresentation>
@@ -162,6 +149,8 @@ export default function Home() {
       <Footer />
       <a target={"_blank"} href="https://contate.me/ezequiassantos-frontend" className="zap zap1"><BsWhatsapp /></a>
       <a href="https://contate.me/ezequiassantos-frontend" className="zap zap2"><BsWhatsapp /></a>
+      {openForm ? (<Form click={()=>setOpenForm(false)}/>):""}
+      
     </Container>
   )
 }
