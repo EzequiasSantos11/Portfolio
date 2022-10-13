@@ -95,7 +95,7 @@ export const Main = styled.div`
     }
   }
   @media (max-width: 800px){
-    height: 50vh;
+    height: 65vh;
     h1{
       font-size: 1.5rem;
     }
