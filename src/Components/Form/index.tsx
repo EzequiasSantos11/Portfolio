@@ -35,15 +35,19 @@ export function Form({click}: PropsForm){
       api.post("", {
         name: data.name,
         email: data.email,
-        message: data.message
+        message: data.message,
+        access_key: "e598c07f-e14d-493b-97d0-baa520484956"
       }).then(function (response) {
-        console.log(response);
+        if(response.status === 200){
+          alert("Mensagem enviada com sucesso!");
+          setData({}as DataProps);
+          click();
+        }
       })
       .catch(function (error) {
         console.log(error);
       });
-      setData({}as DataProps);
-      click();
+    
     }
   }
 
