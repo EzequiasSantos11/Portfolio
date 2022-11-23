@@ -20,7 +20,12 @@ const Post = ({ post }: PropsPost) =>{
   }
   return (
     <Container>
+      <div className="tumb">
+        <img src={post.metadata.tumbnail} />
+        <img src={post.metadata.tumbnail} className="nitda"/>
+      </div>
       <h1>{post.metadata.title}</h1>
+      <span>Postado em: {post.metadata.date}</span>
       <div className="content-article" onClick={()=>handleClick(event)} dangerouslySetInnerHTML={{ __html: `${post.content}` }} />
       <footer>
         <h4>&copy; Feito por | Ezequais Santos</h4>

@@ -57,7 +57,6 @@ export const Main = styled.div`
     z-index: 999;
   }
   p{
-    text-align: center;
     animation: ${AnimateMain} 1.5s forwards;
     font-size: 1.375rem;
     line-height: 1.3;
@@ -65,6 +64,7 @@ export const Main = styled.div`
     width: 50%;
     z-index: 999;
     margin-bottom: 20px;
+    color: #c6e8e3;
   }
   img{
     height: 100%;

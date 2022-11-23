@@ -78,12 +78,12 @@ export const Header = styled.header`
             color: #1769FF;
             font-weight: 800;
           }
-          &.active{
+          /* &.active{
             background: #1769FF;
             a{
               color: #fff;
             }
-          }
+          } */
         }
       }
     

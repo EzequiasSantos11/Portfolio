@@ -2,8 +2,8 @@
 title: ' "Hello World!" Começando no desenvolvimento Front-end'
 date: '11/04/2022'
 excerpt: "Se você ainda não teve seu primeiro contato com o código ou até mesmo teve porém decidiu dar mais um passo em direção ao próximo nível, este post pode te ajudar!"
+tumbnail: "/ImagesPrimeiroPost/exemploDeCodigoCapa.png"
 ---
-![imagem capa primeiro post](/ImagesPrimeiroPost/exemploDeCodigoCapa.png)
 
 Você está pensando em seguir a carreira front-end mas não sabe por onde começar? Neste artigo vou te contar o passo a passo de como se tornar um desenvolvedor front-end e estar preparado para seguir evoluindo em rumo ao próximo nível.  
   

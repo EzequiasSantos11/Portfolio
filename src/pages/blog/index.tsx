@@ -22,7 +22,7 @@ export default function Blog({ posts }: PropsHome) {
       <Main>
         <img src="/background-futuristic.jpg" alt="" />
         <h1>Seja bem vindo(a) ao meu blog!</h1>
-        <p>Tudo sobre o mundo da tecnologia, com foco em frontend e uma pitada de humor. Faça uma boa leitura e caso tenha dicas ou sujestões para posts é só me chamar em uma de minhas redes sociais, será um prazer respondê-lo(a).</p>
+        <p>Tudo sobre o mundo da tecnologia, com foco em frontend.  Faça uma boa leitura e caso tenha dicas ou sujestões para posts é só me chamar em uma de minhas redes sociais, será um prazer respondê-lo(a).</p>
         <div className="sotialMideas">
           <a className="first" target="_blank" href="https://instagram.com/ezequias.dev">
             <ImageInstagram/>

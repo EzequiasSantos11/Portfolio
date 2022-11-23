@@ -6,6 +6,27 @@ export const Container = styled.article`
   justify-content: center;
   align-items: center;
   padding-top: 4rem;
+  .tumb{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 60vh;
+    position: relative;
+    background: #251533;
+    >img{
+      opacity: .4;
+      width: 100%;
+      height: 100%;
+    }
+    .nitda{
+      display: flex;
+      position: absolute;
+      opacity: 1;
+      width: 60%;
+      height: 60%;
+    }
+  }
   h1{
     margin: 40px auto;
     font-weight: 900;
@@ -14,21 +35,22 @@ export const Container = styled.article`
     text-align: center;
   }
   .content-article{
-    width: 70%;
+    width: 60%;
     max-width: 990px;
     margin: 0 auto;
     object-fit: cover;
     img{
       width: 100%;
-      height: 300px;
+      height: 400px;
     }
     h1{
       margin: 1rem auto;
     }
     p{
-      font-size: 18px;
+      font-size: 1.2rem;
+      line-height: 1.6;
       margin: 40px auto;
-      color: ${props => props.theme.colors.textColor};
+      
     }
     a{
       color: blue;
@@ -52,7 +74,7 @@ export const Container = styled.article`
       margin-bottom: 10px;
     }
     span{
-      color: ${props => props.theme.colors.secondary};
+      color: #111;
     }
   }
   @media (max-width: 800px) {

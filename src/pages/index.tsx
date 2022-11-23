@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <Container>
       <Apresentation id="Home">
-        <img src="/portifolio/programer.jpg" alt="" />
+        <img src="/portfolio/programer.jpg" alt="" />
         <div className="right">
           <div className="textApresentation">
             <h1>Olá, eu sou o <span>Ezequias Santos</span></h1>
@@ -33,14 +33,14 @@ export default function Home() {
         <div className="card">
           <h3>Nos conte a sua idéia!</h3>
           <a href="https://br.freepik.com/vetores-gratis/projeto-do-fundo-do-negocio_1072818.htm#query=ideia&position=5&from_view=search">
-            <img src="/portifolio/lampada-foguete.jpg" alt="Desenho vetoreal de uma lámpada amarela sob fundo azul do céu." />
+            <img src="/portfolio/lampada-foguete.jpg" alt="Desenho vetoreal de uma lámpada amarela sob fundo azul do céu." />
           </a>
           <p>A primeira etapa é definir oque se é esperado desse site e quais funcionalidades ele terá. Não se preocupe, você será o regente dessa orquestra.</p>
         </div>
         <div className="card">
           <h3>Expectativa Vs Realidade</h3>
           <a href='https://br.freepik.com/fotos-vetores-gratis/empregado'>
-            <img src="/portifolio/prototipo-ideia.jpg" alt="" />
+            <img src="/portfolio/prototipo-ideia.jpg" alt="" />
           </a>
           <p>
             A segunda etapa é onde um protótipo será apresentado para aprovação, e assim que as expectaivas e todos os detalhes estiverem alinhadas, partimos para a próxima etapa.
@@ -49,7 +49,7 @@ export default function Home() {
         <div className="card">
           <h3>Mãos a obra</h3>
           <a href='https://www.freepik.com/vectors/behavior'>
-            <img src="/portifolio/site.jpg" alt="" />
+            <img src="/portfolio/site.jpg" alt="" />
           </a>
           <p>Após um protótipo ser aprovado ele segue para a terceira etapa que é a de produção onde em poucos dias um site lindo, funcional e responsivo surgirá.</p>
         </div>
@@ -60,50 +60,33 @@ export default function Home() {
         <p>Desde blog, e-commerce, landing page e muito mais. Elevando o desenvolvimento de sites a outro nível.</p>
         <Carousel>
           <div className="projeto" data-value="1">
-            <a target="_blank" href="">
-              <img src="/portifolio/Dashboard.png" alt="" />
+            <a target="_blank" href="https://clone-netflix-ezequiassantos.vercel.app/">
+              <img src="/portfolio/netflix-clone.png" alt="" />
               <h3>
-                Projeto um
+                Netflix clone
               </h3>
-              <p>Breve descrição do projeto um</p>
+              <p>Exemplo de site de vídeos que posso fazer.</p>
             </a>
           </div>
           <div className="projeto" data-value="2">
             <a target="_blank" href="">
-              <img src="/portifolio/Dashboard.png" alt="" />
+              <img src="/portfolio/MusicStore.png" alt="" />
               <h3>
-                Projeto dois
+                Music-store
               </h3>
-              <p>Breve descrição do projeto dois</p>
+              <p>Um exemplo de serviço de músicas on line.</p>
             </a>
           </div>
           <div className="projeto" data-value="3">
             <a target="_blank" href="">
-              <img src="/portifolio/Dashboard.png" alt="" />
+              <img src="/portfolio/NinjaMail.png" alt="" />
               <h3>
-                Projeto três
+                Ninja Mail
               </h3>
-              <p>Breve descrição do projeto três</p>
+              <p>Landing page para promover um serviço de emails personalizados.</p>
             </a>
           </div>
-          <div className="projeto" data-value="4">
-            <a target="_blank" href="">
-              <img src="/portifolio/Dashboard.png" data-value="4" alt="" />
-              <h3>
-                Projeto quatro
-              </h3>
-              <p>Breve descrição do projeto quatro</p>
-            </a>
-          </div>
-          <div className="projeto" data-value="5">
-            <a target="_blank" href="">
-              <img src="/portifolio/Dashboard.png" data-value="4" alt="" />
-              <h3>
-                Projeto cinco
-              </h3>
-              <p>Breve descrição do projeto cinco</p>
-            </a>
-          </div>
+        
         </Carousel>
       </Portfolio>
 
